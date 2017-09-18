@@ -9,16 +9,13 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-        <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
 
 
         <div class="container">
 
-            <img class="article_img" src="<?php echo $image; ?>" alt="">
-
-            <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 
 
+            <h1><?php the_title(); ?></h1>
 
             <?php the_content(); // Dynamic Content ?>
 
