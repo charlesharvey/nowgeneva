@@ -24,7 +24,7 @@ $evenements = new WP_Query(array(
                             <a href="<?php echo $url; ?>" class="event_image" style="background-image:url('<?php echo $image; ?>')"></a>
                         </div>
                         <div class="col-sm-7 col-sm-push-1">
-                            <h4><?php echo get_the_title(); ?></h4>
+                            <h4><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h4>
                             <p><?php echo get_the_excerpt(); ?></p>
                             <p><a href="<?php echo $url; ?>" class="button">Lire plus</a></p>
                         </div>
