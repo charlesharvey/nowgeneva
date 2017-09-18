@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
+<div class="container">
 
-		<!-- section -->
-		<section>
 
 			<h1><?php _e( 'Latest Posts', 'webfactor' ); ?></h1>
 
@@ -10,10 +9,9 @@
 
 			<?php get_template_part('pagination'); ?>
 
-		</section>
-		<!-- /section -->
 
 
-<?php get_sidebar(); ?>
+
+</div>
 
 <?php get_footer(); ?>

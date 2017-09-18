@@ -3,6 +3,7 @@
 
 
 <?php get_template_part('partials/home', 'publicite'); ?>
+<?php get_template_part('partials/home', 'posts'); ?>
 <?php get_template_part('partials/home', 'events'); ?>
 
 <?php get_footer(); ?>
