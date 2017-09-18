@@ -55,6 +55,12 @@ body {
     position: relative;
     box-shadow: 0 0 50px transparentize(black,0.6);
 
+    .background_image {
+        width: 100%;
+        height: auto;
+
+    }
+
     .article_text {
         position: absolute;
         top: 0;
@@ -62,10 +68,12 @@ body {
         height: 100%;
         padding: 20px;
         background: transparentize(black, 0.3);
+        border-left: 1px solid transparentize(white,0.2);
         color: white;
         right: 0;
         width: 30%;
         overflow: hidden;
+        z-index: 3;
 
         h3 {
             font-size: 2.5em;
@@ -107,7 +115,8 @@ body {
     article {
 
         .article_image {
-            height: 200px;
+            height:auto;
+            padding: 38%;
             margin: 0 0 20px;
             box-shadow: 0 0 30px transparentize(black,0.6);
 

@@ -22,13 +22,14 @@ $posts = new WP_Query(array(
             <?php if ($p == 0) : ?>
                 <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
                 <?php $url = get_the_permalink(); ?>
-                <article class="featured_article" style="background-image:url('<?php echo $image; ?>')">
+                <article class="featured_article" >
 
                     <div class="article_text">
                         <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
                         <p><?php echo get_the_excerpt(); ?></p>
                         <p><a href="<?php echo $url; ?>" class="button button_light">Lire plus</a></p>
                     </div>
+                    <img class="background_image" src="<?php echo $image; ?>" alt="">
                 </article>
 
                 <div class="other_articles">
