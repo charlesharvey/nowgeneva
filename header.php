@@ -29,7 +29,7 @@
                             <ul class="social_nav">
                                 <li><a class="icon_search" href="#">Chercher</a></li>
                                 <li ><a class="icon_facebook" href="#">Facebook</a></li>
-                                <li><a class="icon_twitter" href="#">Twitter</a></li>
+                                <li><a class="icon_pinterest" href="#">Pinterest</a></li>
                                 <li><a class="icon_instagram" href="#">Instagram</a></li>
                                 <li><a class="subscription"  href="#">Abonnez-vous</a></li>
                             </ul>

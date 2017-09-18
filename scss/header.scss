@@ -193,6 +193,14 @@ ul.social_nav {
                         border-color:#3b5998;
                 }
             }
+            &.icon_pinterest {
+                background-image:  url('../img/pinterest.svg');
+                background-size: 24px;
+                &:hover {
+                        background-color: #bd081c;
+                        border-color:#bd081c;
+                }
+            }
             &.icon_twitter {
                 background-image: url('../img/twitter-logo.svg');
                 &:hover {

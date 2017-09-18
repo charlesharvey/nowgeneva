@@ -11,7 +11,7 @@
                                 <p>Se hic fidelissimae e se eram nulla elit aliquip.</p>
                                 <ul class="social_nav">
                                     <li ><a class="icon_facebook" href="#">Facebook</a></li>
-                                    <li><a class="icon_twitter" href="#">Twitter</a></li>
+                                    <li><a class="icon_pinterest" href="#">Pinterest</a></li>
                                     <li><a class="icon_instagram" href="#">Instagram</a></li>
                                 </ul>
 
