@@ -10,10 +10,11 @@
 
 
         <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
-        <a  class="article_image" href="<?php the_permalink(); ?>" style="background-image:url('<?php echo $image; ?>');" title="<?php the_title(); ?>"></a>
 
 
         <div class="container">
+
+            <img class="article_img" src="<?php echo $image; ?>" alt="">
 
             <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 

@@ -16,9 +16,7 @@ body {
 }
 
 
-#publicite_container {
-    margin-top:50px;
-}
+
 .advert {
 
     margin: 0 0 20px 0;
@@ -86,7 +84,11 @@ body {
 }
 // END OF featured_article
 
-
+.article_img {
+    width: 100%;
+    height: auto;
+    margin:0px 0 30px;
+}
 
 .article_image {
     height: 400px;
