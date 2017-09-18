@@ -26,7 +26,7 @@
                     <div id="top_nav">
                         <a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                         <div id="social_and_search">
-                            <ul id="social_nav">
+                            <ul class="social_nav">
                                 <li><a class="icon_search" href="#">Chercher</a></li>
                                 <li ><a class="icon_facebook" href="#">Facebook</a></li>
                                 <li><a class="icon_twitter" href="#">Twitter</a></li>

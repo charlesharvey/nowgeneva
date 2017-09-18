@@ -126,7 +126,7 @@ nav#site_nav {
 
 
 
-ul#social_nav {
+ul.social_nav {
 
 
     li {
@@ -204,7 +204,7 @@ ul#social_nav {
 
 @media (min-width: 768px) {
     header {
-        ul#social_nav {
+        ul.social_nav {
             text-align: right;
         }
     }
