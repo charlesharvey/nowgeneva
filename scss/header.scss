@@ -3,9 +3,7 @@
 $nav_height: 130px;
 
 
-// * {
-//     outline: 1px solid red;
-// }
+
 
 header {
 
@@ -80,16 +78,19 @@ header {
 nav {
     font-family: $header_font_stack;
     margin: 0 0 0px;
+    text-align: center;
 
     ul {
         display: flex;
         margin:0  -10px;
         justify-content: space-between;
+        // flex-direction: row;
 
         li {
             // flex:1;
-            display: inline-block;
-            font-size: 1.4em;
+            display: block;
+            font-size: 1.7em;
+            line-height: normal;
 
 
             a {
@@ -116,11 +117,31 @@ nav {
 nav#site_nav {
     background: $font_color !important;
 
+
     a {
         color: white !important;
     }
+
+    ul {
+        display: none;
+    }
+
+    &.menu_visible {
+        ul {
+            display: block;
+        }
+    }
 }
 
+
+#open_nav {
+    display: block;
+    font-size: 1.7em;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
 
 
 
@@ -203,11 +224,28 @@ ul.social_nav {
 }
 
 @media (min-width: 768px) {
+
+
     header {
         ul.social_nav {
             text-align: right;
         }
     }
 
+    nav#site_nav {
+        ul {
+            display: block;
+            text-align: left;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    #open_nav {
+        display: none;
+    }
 
 }

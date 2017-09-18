@@ -8,12 +8,12 @@
 		console.log('scripts working !');
 
 
-				var $navigation_menu = $('#navigation_menu');
-				var $menu_button = $('#menu_button');
+				var $site_nav = $('#site_nav');
+				var $open_nav = $('#open_nav');
 
-				$menu_button.on('click', function(){
+				$open_nav.on('click', function(){
 
-					$navigation_menu.toggleClass('menu_visible');
+					$site_nav.toggleClass('menu_visible');
 
 				});
 
@@ -21,7 +21,7 @@
 				$(document).on('keydown', function(e){
 
 					if(e.keyCode == 27 ){
-						$navigation_menu.removeClass('menu_visible');
+						$site_nav.removeClass('menu_visible');
 
 				 		$('.search_box').removeClass('visible');
 					}

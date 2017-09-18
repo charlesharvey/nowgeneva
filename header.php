@@ -41,9 +41,11 @@
 
 
             <nav id="site_nav">
+                <a href="#" id="open_nav">Menu</a>
                 <div class="container">
                     <ul >
                          <?php chilly_nav('primary-navigation'); ?>
                     </ul>
                 </div>
+
             </nav>
