@@ -25,9 +25,9 @@ $posts = new WP_Query(array(
                 <article class="featured_article" style="background-image:url('<?php echo $image; ?>')">
 
                     <div class="article_text">
-                        <p class="category"><?php the_category(','); ?></p>
-                        <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
 
+                        <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
+                        <p class="category"><?php the_category(','); ?></p>
                         <p><?php echo get_the_excerpt(); ?></p>
                         <p><a href="<?php echo $url; ?>" class="button button_light">Lire plus</a></p>
                     </div>
@@ -43,9 +43,9 @@ $posts = new WP_Query(array(
                         <div class="col-sm-4">
                             <article>
                                 <a href="<?php echo $url; ?>" class="article_image" style="background-image:url('<?php echo $image; ?>')"></a>
-                                <p class="category"><?php the_category(','); ?></p>
-                                <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
 
+                                <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
+                                <p class="category"><?php the_category(','); ?></p>
                                 <p><?php echo get_the_excerpt(); ?></p>
 
                             </article>
