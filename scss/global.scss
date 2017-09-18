@@ -51,7 +51,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 500px;
+    padding: 25%;
     position: relative;
     box-shadow: 0 0 50px transparentize(black,0.6);
 
@@ -116,7 +116,7 @@ body {
 
         .article_image {
             height:auto;
-            padding: 38%;
+            padding: 25%;
             margin: 0 0 20px;
             box-shadow: 0 0 30px transparentize(black,0.6);
 
