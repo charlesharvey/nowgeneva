@@ -19,23 +19,31 @@
 	<body <?php body_class(); ?>>
 
 
-			<header class="header" id="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-							<a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
-						</div>
-						<div class="col-sm-9">
-							<nav id="navigation_menu" role="navigation">
-								 <ul>
-									 <?php chilly_nav('primary-navigation'); ?>
-								 </ul>
-							</nav>
-						</div>
-
-					</div>
-					<a href="#" id="menu_button" >Menu</a>
-				</div>
 
 
-			</header>
+            <header class="header ">
+                <div class="container">
+                    <div id="top_nav">
+                        <a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                        <div id="social_and_search">
+                            <ul id="social_nav">
+                                <li><a class="icon_search" href="#">Chercher</a></li>
+                                <li ><a class="icon_facebook" href="#">Facebook</a></li>
+                                <li><a class="icon_twitter" href="#">Twitter</a></li>
+                                <li><a class="icon_instagram" href="#">Instagram</a></li>
+                                <li><a class="subscription"  href="#">Abonnez-vous</a></li>
+                            </ul>
+                            <!-- <form action="#"><input name="s" type="text" placeholder="search this site..."></form> -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <nav id="site_nav">
+                <div class="container">
+                    <ul >
+                         <?php chilly_nav('primary-navigation'); ?>
+                    </ul>
+                </div>
+            </nav>

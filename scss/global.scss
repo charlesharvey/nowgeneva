@@ -1,93 +1,161 @@
 
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'header';
-@import 'footer';
 
-
-
+@import "variables";
+@import "reset";
+@import "typography";
+@import "header";
+@import "footer";
+// @import "../../node_modules/bxslider/dist/jquery.bxslider";
 
 
 body {
-	background: $background-color;
-	color: $font-color;
-	font-family: $font-stack;
-	font-size: 62.5%;
-	font-weight: normal;
-}
-
-
-/*TYPOGRAPHY*/
-
-h1 {font-size: 3.9em; padding:50px 0 50px;font-weight: normal;}
-h2 {font-size: 2.9em; padding: 0 0 20px;font-weight: bold}
-h3 {font-size: 2.21em;padding:0 0 20px;}
-h4 {font-size: 1.69em;padding:0 0 10px;font-weight: bold;text-transform: uppercase}
-
-p { font-size: 1.5em;padding:0 0 30px;line-height: 160%;  }
-li { font-size: 1.5em;padding:0 0 5px;line-height: 160%  }
-
-section p, section li {font-size:2em;}
-
-
-li li, li p {font-size: inherit;}
-ul ul , ul ol, ol ol {font-size: inherit}
-
-
-@media (min-width: 768px){
-	h1 {font-size: 5em;}
-	h2 {font-size: 3.1em}
-	h3 {font-size: 2.41em}
-	h4 {font-size: 1.79em}
-
+    font-family: $font_stack;
+    color: $brand_color;
+    background-color: $background_color;
+    font-size: 62.5%;
 }
 
 
 
+.advert {
+
+    margin: 0 0 20px 0;
+    box-shadow: 0 0 30px transparentize(black,0.7);
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+    }
+
+    .advert_text {
+        width: 100%;
+        background: $font_color;
+        color: white;
+        padding:20px;
+        text-align: center;
+
+        p {
+            padding: 0;
+        }
+    }
+}
+// END OF ADVERT
 
 
 
-a {
-	text-decoration: none;
-	border-bottom: 1px dotted $primary-color;
-	display: inline-block;
-	font-style: italic;
-	border-radius:3px;
-	@include transition(0.3s);
 
 
-	&:link, &:visited, &:active {
-		color: $primary-color
-	}
-	&:hover {
-		border-bottom: 1px solid $primary-color;
-		background-color: transparentize($primary-color,0.8)
-	}
+.featured_article {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+    box-shadow: 0 0 50px transparentize(black,0.6);
+
+    .article_text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        padding: 20px;
+        background: transparentize(black, 0.3);
+        color: white;
+        right: 0;
+        width: 30%;
+        overflow: hidden;
+        
+        h3 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.4em;
+        }
+    }
+
+
+}
+// END OF featured_article
+
+
+
+
+.other_articles {
+    margin:40px 0 0;
+    article {
+
+        .article_image {
+            height: 200px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 0 30px transparentize(black,0.6);
+            margin: 0 0 20px;
+        }
+        h3 {
+            font-size: 2.3em;
+            padding: 0 0 10px;
+
+        }
+        p {
+            font-size: 1.4em;
+        }
+
+
+    }
+
+
+    .more_articles {
+        margin:50px 0 0;
+        text-align: center;
+    }
+
+
+
+}
+// END OF OTHER ARTICLES
+
+
+
+
+
+
+
+.events {
+    margin:0 0 50px;
+    .event {
+            font-size: 1em;
+            margin:0 0 50px;
+            padding: 0;
+
+            p {
+                font-size: 1.4em;
+            }
+
+
+        .event_image {
+            height: 200px;
+            margin: 0 0 20px;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition:all 0.3s;
+            box-shadow: 0 0 30px transparentize(black,0.6);
+
+            &:hover {
+
+            }
+
+        }
+
+    }
+
+
 }
 
 
-
-
-strong, b {font-weight: bold;}
-em, i {font-style: italic}
-
-table {
-	width: 100%;
-	margin:0 0 40px;
-}
-
-th, td {font-size: 1.5em;padding:10px;border:0}
-section td {font-size: 2em;line-height: 160%;padding:0 0 10px;}
-
-blockquote {
-	padding:20px 0 20px 40px;
-	border-left:4px solid #888;
-	margin:40px 20px 40px 40px;
-	font-size: 140%;
-	font-style: italic;
-	max-width: 700px;
-}
-blockquote p:last-child {padding-bottom: 0}
-
-input {padding: 10px;width: 100%;font-size: 1.5em;appearance:none;}
+// END OF EVENTS

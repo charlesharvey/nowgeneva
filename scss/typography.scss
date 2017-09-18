@@ -1,0 +1,117 @@
+@import "variables.scss";
+
+h1,h2,h3,h4,h5 {
+    font-family: $header_font_stack;
+
+}
+
+h1 {
+    font-size: 5.5em;
+    padding: 0 0 30px;
+}
+
+h2 {
+    font-size: 4.6em;
+    margin: 90px 0 50px;
+    text-align: center;
+    position: relative;
+    font-style: italic;
+
+
+    span  {
+        background: white;
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+
+    &:after, &:before {
+        content:'';
+        border-top:1px solid $font_color;
+        width: 50%;
+        height: 0;
+        position: absolute;
+        left: 25%;
+        top:52%;
+        z-index: -1;
+    }
+}
+
+h3 {
+    font-size: 3em;
+    padding: 0 0 30px;
+}
+
+h4 {
+    font-size: 2.4em;
+    padding: 0 0 20px;
+}
+
+
+p  {
+    font-size: $font_size;
+    line-height: 160%;
+    padding:0 0 30px;
+}
+
+li {
+    font-size: $font_size;
+    line-height: 150%;
+}
+
+a {
+
+    text-decoration: none;
+    transition: all $transition_time;
+    color: $brand_color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+.button {
+    display: inline-block;
+    appearance:none;
+    background: white;
+    padding: 10px 30px;
+    border:2px solid $font_color;
+    border-radius: 5px;
+    margin:0 0 0;
+    text-align: center;
+    color: $font_color;
+
+    &:hover {
+        background-color: $font_color;
+        color: white;
+    }
+
+    &.button_light {
+        color: white;
+        border-color: white;
+        background: $font_color;
+
+        &:hover {
+            background-color: white;
+            color:$font_color;
+        }
+    }
+}
+
+
+form {
+    input {
+        padding: 10px;
+        font-size: $font_size;
+        font-family: $font_stack;
+    }
+
+    textarea {
+        padding: 10px;
+        font-size: $font_size;
+        font-family: $font_stack;
+    }
+
+}
