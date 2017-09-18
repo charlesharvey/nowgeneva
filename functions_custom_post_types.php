@@ -58,6 +58,7 @@ function create_custom_post_types() {
                 'has_archive' => true,
                 'supports' => array(
                     'title',
+                        'editor',
                     'thumbnail'
                 ), // Go to Dashboard Custom HTML5 Blank post for supports
                 'can_export' => true, // Allows export in Tools > Export
@@ -87,6 +88,7 @@ function create_custom_post_types() {
                 'has_archive' => true,
                 'supports' => array(
                     'title',
+                        'editor',
                     'thumbnail'
                 ), // Go to Dashboard Custom HTML5 Blank post for supports
                 'can_export' => true, // Allows export in Tools > Export

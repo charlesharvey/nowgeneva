@@ -21,7 +21,7 @@ $posts = new WP_Query(array(
 
             <?php if ($p == 0) : ?>
                 <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
-                        <?php $url = get_the_permalink(); ?>
+                <?php $url = get_the_permalink(); ?>
                 <article class="featured_article" style="background-image:url('<?php echo $image; ?>')">
 
                     <div class="article_text">
@@ -36,7 +36,7 @@ $posts = new WP_Query(array(
 
                     <?php else : ?>
                         <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
-                                    <?php $url = get_the_permalink(); ?>
+                        <?php $url = get_the_permalink(); ?>
                         <div class="col-sm-4">
                             <article>
                                 <a href="<?php echo $url; ?>" class="article_image" style="background-image:url('<?php echo $image; ?>')"></a>
@@ -50,11 +50,11 @@ $posts = new WP_Query(array(
 
                     <?php $p++; endwhile; ?>
 
-                </div>
+                </div> <!-- END OF ROW -->
 
 
                 <p class="more_articles"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="button">Plus d'articles</a></p>
-            </div>
+            </div><!-- END OF OTHER ARTICLES -->
 
 
         </div>

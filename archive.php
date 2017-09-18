@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-	
-		<!-- section -->
-		<section>
+<div class="container">
 
 			<h1><?php _e( 'Archives', 'webfactor' ); ?></h1>
 
@@ -10,10 +8,8 @@
 
 			<?php get_template_part('pagination'); ?>
 
-		</section>
-		<!-- /section -->
-	
+</div>
 
-<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>
