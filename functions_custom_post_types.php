@@ -98,6 +98,37 @@ function create_custom_post_types() {
 
 
 
+                        register_post_type('portrait', // Register Custom Post Type
+                            array(
+                            'labels' => array(
+                                'name' => __('Portraits', 'html5blank'), // Rename these to suit
+                                'singular_name' => __('Portrait', 'html5blank'),
+                                'add_new' => __('Ajouter', 'html5blank'),
+                                'add_new_item' => __('Add New Portrait', 'html5blank'),
+                                'edit' => __('Edit', 'html5blank'),
+                                'edit_item' => __('Edit Portrait', 'html5blank'),
+                                'new_item' => __('New Portrait', 'html5blank'),
+                                'view' => __('View Portrait', 'html5blank'),
+                                'view_item' => __('View Portrait', 'html5blank'),
+                                'search_items' => __('Search Portrait', 'html5blank'),
+                                'not_found' => __('No Portraits found', 'html5blank'),
+                                'not_found_in_trash' => __('No Portrait found in Trash', 'html5blank')
+                            ),
+                            'public' => true,
+                            'exclude_from_search' => false,
+                            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+                            'has_archive' => true,
+                            'supports' => array(
+                                'title',
+                                    'editor',
+                                'thumbnail'
+                            ), // Go to Dashboard Custom HTML5 Blank post for supports
+                            'can_export' => true, // Allows export in Tools > Export
+                            'taxonomies' => array(
+                            ) // Add Category and Post Tags support
+                        ));
+
+
 }
 
 
