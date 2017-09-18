@@ -16,7 +16,9 @@ body {
 }
 
 
-
+#publicite_container {
+    margin-top:50px;
+}
 .advert {
 
     margin: 0 0 20px 0;
@@ -86,6 +88,18 @@ body {
 
 
 
+.article_image {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: $light_grey;
+
+
+    width: 100%;
+    display: inline-block;
+}
+
 
 .other_articles {
     margin:40px 0 0;
@@ -93,15 +107,12 @@ body {
 
         .article_image {
             height: 200px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-color: $light_grey;
+                margin: 0 0 20px;
             box-shadow: 0 0 30px transparentize(black,0.6);
-            margin: 0 0 20px;
-            width: 100%;
-            display: inline-block;
+
         }
+
+
         h3 {
             font-size: 2.3em;
             padding: 0 0 10px;

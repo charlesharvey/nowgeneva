@@ -2,6 +2,8 @@
 
 <?php  if ($publicity->have_posts() ) :   while($publicity->have_posts()) : $publicity->the_post();   ?>
     <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'medium') : ''; ?>
+
+<div id="publicite_container">
 <div class="container">
     <div class="advert">
         <img src="<?php echo $image; ?>"  alt="<?php echo get_the_title(); ?>">
@@ -12,5 +14,5 @@
 
 
 </div>
-
+</div>
 <?php   endwhile; endif; ?>
