@@ -5,12 +5,9 @@ h1,h2,h3,h4,h5 {
 
 }
 
-h1 {
-    font-size: 5.5em;
-    padding: 0px 0 30px;
-}
 
-h2 {
+
+h2, h1 {
     font-size: 3.8em;
     margin: 90px 0 50px;
     text-align: center;
@@ -36,6 +33,16 @@ h2 {
         z-index: -1;
     }
 }
+
+h1 {
+  font-size: 5.5em;
+  padding: 0px 0 30px;
+  margin: 100px 0 10px;
+      &:after, &:before {
+        top: 37%;
+      }
+}
+
 
 h3 {
     font-size: 3em;

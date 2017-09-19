@@ -15,8 +15,8 @@
 
 
 
-            <h1><?php the_title(); ?></h1>
-            <p class="category"><?php the_category(','); ?></p>
+            <h1><span><?php the_title(); ?></span></h1>
+            <p class="single-category"><?php the_category(','); ?></p>
             <?php the_content(); // Dynamic Content ?>
 
 
