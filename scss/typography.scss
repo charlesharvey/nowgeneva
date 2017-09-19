@@ -77,7 +77,20 @@ a {
     }
 }
 
-
+blockquote {
+  font-size: 1.8em;
+  font-family: $header_font_stack;
+  line-height:200%;
+  padding-right: 40px;
+  border-right: 2px solid black;
+  max-width: 80%;
+  text-align: right;
+  margin: 40px auto;
+  font-style: italic;
+  p:last-child{
+    padding: 0;
+  }
+}
 
 .button {
     display: inline-block;
