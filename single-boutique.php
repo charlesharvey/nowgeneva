@@ -21,7 +21,7 @@
 
 
 
-            <?php get_template_part('partials/single', 'boutiques'); ?>
+
 
             <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
