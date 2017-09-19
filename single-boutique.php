@@ -8,7 +8,7 @@
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
+        <?php  $boutique_cats = get_the_terms( get_the_ID(), 'boutique_cat' ); ?>
 
 
         <div class="container">
@@ -20,7 +20,9 @@
                     <div class="col-sm-3">
 
                         <h1><span><?php the_title(); ?></span></h1>
-                        <p class="single-category"><?php the_category(','); ?></p>
+                        <?php  if ($boutique_cats) : ?>
+                        <p class="single-category"><?php  echo $boutique_cats[0]->name; ?></p>
+                        <?php endif; ?>
                         <?php the_content(); // Dynamic Content ?>
 
                     </div>
