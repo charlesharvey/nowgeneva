@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p>123 Rue des Cloches <br>1205 Genève <br>Tel: 12345 123465 <br /> Email: <a href="mailto:contact@nowgeneva.com">contact@nowgeneva.com</a> </p>
+                                <p>15 rue Verdaine <br>1204 Genève <br>Tel: 12345 123465 <br /> Email: <a href="mailto:contact@nowgeneva.com">contact@nowgeneva.com</a> </p>
                             </div>
                         </div>
 
