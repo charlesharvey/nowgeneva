@@ -15,7 +15,10 @@ body {
     font-size: 50%;
 }
 
-
+img{
+  width: 100%;
+  height: auto;
+}
 
 .advert {
 
@@ -124,7 +127,7 @@ p.category {
     display: inline-block;
     margin:-20px 0 30px;
     border-radius: 5px;
-    
+
     a {
         color: inherit;
     }
