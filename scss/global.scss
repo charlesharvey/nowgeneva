@@ -24,7 +24,7 @@ img{
 .advert {
 
     margin: 0 0 20px 0;
-    box-shadow: 0 0 30px transparentize(black,0.7);
+    // box-shadow: 0 0 30px transparentize(black,0.7);
 
     img {
         width: 100%;
@@ -57,7 +57,7 @@ img{
     background-size: cover;
     padding: 25%;
     position: relative;
-    box-shadow: 0 0 50px transparentize(black,0.6);
+    // box-shadow: 0 0 50px transparentize(black,0.6);
 
     .background_image {
         width: 100%;
@@ -91,12 +91,6 @@ img{
         p {
             font-size: 1.4em;
 
-            &.category {
-                margin:  0 0  20px;
-                background:  white;
-                color:$font_color;
-
-            }
         }
     }
 
@@ -122,12 +116,11 @@ img{
 }
 
 p.category {
-    padding: 5px;
-    background: $font_color;
-    color: white;
-    display: inline-block;
-    margin:-20px 0 30px;
-    border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 1.6em;
+  margin: 0;
+  padding: 0 3px;
 
     a {
         color: inherit;
@@ -145,7 +138,7 @@ p.category {
             height:auto;
             padding: 25%;
             margin: 0 0 20px;
-            box-shadow: 0 0 30px transparentize(black,0.6);
+            // box-shadow: 0 0 30px transparentize(black,0.6);
 
         }
 
@@ -229,7 +222,7 @@ p.category {
             background-position: center center;
             background-size: cover;
             transition:all 0.3s;
-            box-shadow: 0 0 30px transparentize(black,0.6);
+            // box-shadow: 0 0 30px transparentize(black,0.6);
 
             &:hover {
 

@@ -17,14 +17,8 @@
                         <?php  if ($boutique_cats) : ?>
                         <p class="single-category"><?php  echo $boutique_cats[0]->name; ?></p>
                         <?php endif; ?>
-              <div class="row">
-                <div class="col-sm-6 col-md-6">
-                  <?php the_post_thumbnail();?>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                    <?php the_content(); // Dynamic Content ?>
-                </div>
-              </div>
+                        <?php the_content(); // Dynamic Content ?>
+
               <div class="row" style="margin-top:100px;">
                 <div class="col-sm-6">
                 <div class="infos_boutique">
