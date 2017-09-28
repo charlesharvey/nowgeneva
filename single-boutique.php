@@ -50,8 +50,13 @@
                                 var location_address = '<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_field("address"))); ?>' ;
                             </script>
 
-                    </div>
                 </div>
+            </div>
+
+
+
+            <?php get_template_part('partials/single', 'posts-from-shop'); ?>
+
 
 
 

@@ -529,5 +529,31 @@ include('functions_custom_post_types.php');
 
 
 
+function get_posts_from_shop_id($shop_id) {
+    // gets all the posts that have a shoparticle associated with it
+    global $wpdb;
+    $shop =  '"%\"'.  $shop_id. '\"%"';
+    $results = $wpdb->get_results( 'SELECT post_id
+        FROM wp_postmeta
+        LEFT JOIN wp_posts ON wp_postmeta.post_id = wp_posts.ID
+        WHERE post_type = "post"
+        AND meta_key = "boutiques"
+        AND meta_value LIKE ' . $shop , OBJECT );
+
+    $post_ids = array_map( 'get_post_id_from_wpdb',  $results );
+    $shop_posts = new WP_Query( array( 'post_type' => 'post', 'post__in' => $post_ids ) );
+    wp_reset_query();
+    return $shop_posts;
+
+}
+
+
+function get_post_id_from_wpdb($row){
+    return  intval($row->post_id);
+}
+
+
+
+
 
 ?>
