@@ -1,3 +1,6 @@
+import bxslider from '../node_modules/bxslider/dist/jquery.bxslider.min';
+
+
 (function ($, root, undefined) {
 
 	$(function () {
@@ -27,6 +30,20 @@
 					}
 
 				})
+
+
+
+                // slider
+                    $('.bxslider').bxSlider({
+                         pagerCustom: '#bx-pager',
+                         adaptiveHeight: false,
+                    });
+
+                // end of slider
+
+
+
+
 
 
                 // MAP

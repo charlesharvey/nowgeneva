@@ -118,6 +118,10 @@ blockquote {
             color:$font_color;
         }
     }
+    &.button_block {
+        display: block;
+        text-align: center;
+    }
 }
 
 
