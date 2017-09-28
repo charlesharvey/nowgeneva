@@ -1,0 +1,59 @@
+#supermenu_container {
+
+    position: relative;
+
+
+    color: white;
+
+
+    a {
+        color: white;
+        border: 0;
+
+        &:hover {
+            text-shadow: 0 0 5px white;
+        }
+    }
+
+    .supermenu {
+        background:lighten($font_color,10);
+        position: absolute;
+        z-index: 3;
+        top:-5px;
+        width: 100%;
+        left: 0;
+        display: none;
+        text-align: left;
+        font-family: $font_stack;
+
+        padding: 10px 0;
+
+        &.hovered {
+            display: block;
+        }
+
+        h3 {
+            font-size: 2em;
+            font-family: $font_stack;
+            padding: 10px 0 ;
+        }
+
+        ul {
+            display: block;
+
+            li {
+                list-style: none;
+                display: block;
+                padding: 10px 0;
+                a {
+                    padding: 0;
+                }
+            }
+
+        }
+
+
+    }
+
+
+}
