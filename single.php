@@ -30,8 +30,6 @@
 
             <?php  get_template_part('partials/single', 'author'); ?>
 
-            <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
 
 
         </div>  <!-- END OF CONTAINER -->

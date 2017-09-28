@@ -4,7 +4,6 @@
 
 <?php if ($boutiques) : ?>
     <div class="boutiques_container">
-
     <ul class="boutiques_list ">
         <li class="boutique_item"> <strong>Nos boutiques:</strong> </li>
         <?php  foreach($boutiques as $boutique):  ?>

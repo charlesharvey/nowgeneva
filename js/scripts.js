@@ -1,4 +1,5 @@
-import bxslider from '../node_modules/bxslider/dist/jquery.bxslider.min';
+import bxslider from '../node_modules/bxslider/dist/jquery.bxslider';
+import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHeight';
 
 
 (function ($, root, undefined) {
@@ -9,7 +10,7 @@ import bxslider from '../node_modules/bxslider/dist/jquery.bxslider.min';
 
 
 
-
+        $('.post_shop_cont_match').matchHeight();
 
 				var $site_nav = $('#site_nav');
 				var $open_nav = $('#open_nav');
@@ -36,7 +37,7 @@ import bxslider from '../node_modules/bxslider/dist/jquery.bxslider.min';
                 // slider
                     $('.bxslider').bxSlider({
                          pagerCustom: '#bx-pager',
-                         adaptiveHeight: false,
+                         adaptiveHeight: true,
                     });
 
                 // end of slider

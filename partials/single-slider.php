@@ -1,3 +1,5 @@
+<?php if(have_rows('slider')) : ?>
+
 <ul class="bxslider">
 
 <?php $thumbs = array(); ?>
@@ -40,3 +42,5 @@
       <a data-slide-index="<?php echo $ti; ?>" href=""><img src="<?php echo $thumb; ?>" /></a>
     <?php $ti++; endforeach; ?>
 </div>
+
+<?php endif ; ?>

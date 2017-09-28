@@ -1,54 +1,26 @@
 .single{
-  .single-category{
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-size: 1.6em;
-    margin: 0;
-    text-align: center;
-    a {
-        border: 0;
+    .single-category{
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 1.6em;
+        margin: 0;
+        text-align: center;
+        a {
+            border: 0;
+        }
     }
-  }
-  p{
+    p{
 
-  }
-
-  .infos_boutique {
-    background: #eee;
-    padding: 30px 20px;
-    position: relative;
-    z-index: -2;
-    min-height: 300px;
-    h2 {
-      margin: 0 20px 20px;
-      span{
-      background: #eee;
-      }
-    }
-    p {
-      padding-bottom: 0;
-      font-size: 1.6em;
     }
 
-    .boutique_tags {
-      border-top: solid 1px;
-      border-bottom: solid 1px;
-      padding: 5px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
 
-    h6 {
-      font-weight: bold; font-size: 1.8em; margin-bottom: 5px;
-    }
-}
 
 }
 
 
 #map_container {
     height: 300px;
-    margin:0 0 30px;
+    margin:0 0 0px;
 
 }
 
@@ -120,7 +92,121 @@
 
     }
     .author_description {
-    float:right;
-    width: calc(100% - 125px);
+        float:right;
+        width: calc(100% - 125px);
+    }
+}
+
+
+
+.info_map {
+    border: 2px solid $font_color;
+    margin: 100px 0 20px;
+    padding: 0px;
+}
+
+
+.infos_boutique {
+
+    position: relative;
+    z-index: -2;
+    min-height: 300px;
+    padding: 20px;
+    h2 {
+        margin: 0px 20px 20px;
+        span{
+
+        }
+    }
+    p {
+        padding-bottom: 0;
+        font-size: 1.6em;
+    }
+
+    .boutique_tags {
+        border-top: solid 1px;
+        border-bottom: solid 1px;
+        padding: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h6 {
+        font-weight: bold; font-size: 1.8em; margin-bottom: 5px;
+    }
+
+}
+
+
+
+
+.posts_from_shop_container {
+    min-height: 200px;
+    overflow: scroll
+}
+.posts_from_shop_list {
+
+    .posts_from_shop_item {
+
+        padding:10px 0;
+        font-size: 1em;
+
+        .post_from_shop_image {
+            display: block;
+
+            float: left;
+            img {
+                width: 100px;
+                height: auto;
+            }
+
+
+
+
+        }
+
+        .post_from_shop_info {
+            width: calc(100% - 110px);
+            float:right;
+        }
+
+        a {
+            border: 0;
+        }
+
+    }
+
+}
+
+
+.featured_post_about_shop {
+
+    .macaron {
+        position: absolute;
+        top:10px;
+        left: 0px;
+        background: $font_color;
+        color:white;
+        display: inline-block;
+        font-size: 1.4em;
+        text-align: center;
+        padding:15px 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+    }
+    a {
+        border: 0;
+        position: relative;
+        display: block;
+    }
+
+    p {
+        padding: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin:0 0 10px;
     }
 }
