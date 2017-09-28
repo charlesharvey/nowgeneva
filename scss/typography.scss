@@ -71,10 +71,19 @@ a {
     text-decoration: none;
     transition: all $transition_time;
     color: $brand_color;
+    border-bottom: 1px dotted $font_color;
 
     &:hover {
         text-decoration: none;
     }
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em , i {
+    font-style: italic;
 }
 
 blockquote {

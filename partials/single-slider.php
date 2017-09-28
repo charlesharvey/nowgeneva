@@ -22,7 +22,7 @@
                      <div class="slide_content">
                          <?php echo $content; ?>
                             <?php if($link && $link != '') : ?>
-                                <p><a class="button button_block" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
+                                <p><a class="button button_light button_block" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
                             <?php endif; ?>
                      </div>
                 </div>

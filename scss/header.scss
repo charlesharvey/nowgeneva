@@ -29,6 +29,7 @@ header {
         background-size: 190px;
         background-size: contain;
         height: $nav_height;
+        border: 0;
         display: inline-block;
 
         &:hover {
