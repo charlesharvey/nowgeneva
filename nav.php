@@ -81,10 +81,12 @@ array_push($chilly_supermenus, $supermenu);
             <?php array_push($chilly_supermenus, $supermenu); ?>
             <?php endforeach; ?>
 
+             <?php chilly_nav('primary-navigation'); ?>
+
             <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="#">Portraits</a></li>
             <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="#">POP-UP EVENTS</a></li>
 
-             <?php chilly_nav('primary-navigation'); ?>
+
         </ul>
     </div>
 
