@@ -26,8 +26,11 @@ $posts = new WP_Query(array(
 
                     <div class="article_text">
 
+                        <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
                         <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
-                        <p class="category"><?php the_category(','); ?></p>
+                        <?php if (sizeof($categories) > 0) : ?>
+                        <p class="category"><?php echo ($categories[0]->name); ?></p>
+                        <?php endif; ?>
                         <p><?php echo get_the_excerpt(); ?></p>
                         <p><a href="<?php echo $url; ?>" class="button button_light">Lire plus</a></p>
                     </div>
@@ -40,12 +43,15 @@ $posts = new WP_Query(array(
                     <?php else : ?>
                         <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
                         <?php $url = get_the_permalink(); ?>
+                        <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
                         <div class="col-sm-4">
                             <article>
                                 <a href="<?php echo $url; ?>" class="article_image" style="background-image:url('<?php echo $image; ?>')"></a>
 
                                 <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
-                                <p class="category"><?php the_category(','); ?></p>
+                                <?php if (sizeof($categories) > 0) : ?>
+                                <p class="category"><?php echo ($categories[0]->name); ?></p>
+                                <?php endif; ?>
                                 <p><?php echo get_the_excerpt(); ?></p>
 
                             </article>

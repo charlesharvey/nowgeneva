@@ -1,24 +1,23 @@
 <?php get_header(); ?>
 
 
-		<!-- section -->
-		<section>
+<!-- section -->
+<section>
 
-			<!-- article -->
-			<article id="post-404">
+    <!-- article -->
+    <article id="post-404">
+        <div class="container">
+            <h1><span><?php _e( 'Page not found', 'webfactor' ); ?></span></h1>
+            <p style="text-align:center">
+                <a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'webfactor' ); ?></a>
+            </p>
+        </div>
+    </article>
+    <!-- /article -->
 
-				<h1><?php _e( 'Page not found', 'webfactor' ); ?></h1>
-				<p>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'webfactor' ); ?></a>
-				</p>
-
-			</article>
-			<!-- /article -->
-
-		</section>
-		<!-- /section -->
+</section>
+<!-- /section -->
 
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

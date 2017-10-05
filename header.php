@@ -39,7 +39,7 @@
                 </div>
             </header>
 
-
+             <?php get_template_part('searchform'); ?>
              <?php get_template_part('nav'  )   ?>
 
 <div id="rest_of_site">

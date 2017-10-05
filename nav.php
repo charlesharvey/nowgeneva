@@ -9,11 +9,14 @@ $categories = get_terms( array(
 )  );
 
 
+
 $portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 ));
 $supermenu = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><p>Lipsum</p></div>';
+$supermenu .= '<div class="col-sm-3"><blockquote>Aute doctrina nam laborum, ad amet singulis eiusmod.Aut cernantur graviterque ubi cernantur te dolor.</blockquote></div>';
 foreach ( $portraits as $post ) : setup_postdata( $post );
-$supermenu .= '<div class="col-sm-3"><h3><a href="'.get_the_permalink().'">'. get_the_title()  .'</a></h3><p>'. get_the_excerpt() .'</p></div>';
+$image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+$permalink = get_the_permalink();
+$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
 endforeach; wp_reset_postdata();
 $supermenu .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu);
@@ -36,10 +39,12 @@ $events = get_posts(array(
       )
  ));
 $supermenu = '<div id="supermenu_events" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><p>Lipsum</p></div>';
+$supermenu .= '<div class="col-sm-3"><blockquote>Voluptate fidelissimae e officia e incurreret a minim mentitum. Labore eiusmod ita esse amet se sunt qui officia.</blockquote></div>';
 foreach ( $events as $post ) : setup_postdata( $post );
 $date = get_field('date');
-$supermenu .= '<div class="col-sm-3"><h3><a href="'.get_the_permalink().'">'. get_the_title()  .'</a></h3><p>'. get_the_excerpt() .'</p><p>'. $date .'</p></div>';
+$image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+$permalink = get_the_permalink();
+$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.get_the_permalink().'">'. get_the_title()  .'</a></h3><p class="the_date">Le '. $date .'</p></div>';
 endforeach; wp_reset_postdata();
 $supermenu .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu);
@@ -68,7 +73,10 @@ array_push($chilly_supermenus, $supermenu);
                     };
                  $supermenu .= ' </ul></div>';
                  foreach ( $latest as $post ) : setup_postdata( $post );
-                 $supermenu .= '<div class="col-sm-3"><h3><a href="'.get_the_permalink().'">'. get_the_title()  .'</a></h3><p>'. get_the_excerpt() .'</p></div>';
+                   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+                   $permalink = get_the_permalink();
+
+                  $supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'. $permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
                 endforeach; wp_reset_postdata();
                  $supermenu .=  '</div></div></div>';
 

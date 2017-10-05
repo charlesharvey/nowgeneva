@@ -14,11 +14,14 @@
 
 
 		<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-
+        <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
+        <?php if (sizeof($categories) > 0) : ?>
+            <p class="category"><?php echo ($categories[0]->name); ?></p>
+        <?php endif; ?>
 
 		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 
-		<?php edit_post_link(); ?>
+		<?php // edit_post_link(); ?>
 
 	</article>
     </div>

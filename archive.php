@@ -2,7 +2,7 @@
 
 <div class="container">
 
-			<h1><?php _e( 'Archives', 'webfactor' ); ?></h1>
+			<h1><span><?php _e( 'Archives', 'webfactor' ); ?></span></h1>
 
 			<?php get_template_part('loop'); ?>
 

@@ -3,7 +3,7 @@
 <div class="container">
 
 
-			<h1><?php _e( 'Latest Posts', 'webfactor' ); ?></h1>
+			<h1><span>A la une</span></h1>
 
 			<?php get_template_part('loop'); ?>
 

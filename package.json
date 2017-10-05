@@ -25,6 +25,7 @@
   "dependencies": {
     "bxslider": "^4.2.13",
     "jquery": "^3.2.1",
+    "jquery-lazyload": "^1.9.7",
     "jquery-match-height": "^0.7.2"
   },
   "devDependencies": {

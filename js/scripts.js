@@ -1,5 +1,6 @@
 import bxslider from '../node_modules/bxslider/dist/jquery.bxslider';
 import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHeight';
+import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
 (function ($, root, undefined) {
@@ -26,11 +27,28 @@ import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHe
 
 				if(e.keyCode == 27 ){
 					$site_nav.removeClass('menu_visible');
+                    $search_form.removeClass('search_form_visible');
 
-			 		$('.search_box').removeClass('visible');
 				}
 
 			})
+
+
+
+
+
+    		// SEARCH BOX
+    		var $search_opener = $('.icon_search');
+    		var $search_form = $('#search_form');
+    		var $close_search_form = $('#close_search_form');
+    		$search_opener.on('click', function(){
+    			$search_form.addClass('search_form_visible');
+    		});
+    		$close_search_form.on('click', function(){
+    			$search_form.removeClass('search_form_visible');
+    		});
+
+
 
 
 
@@ -43,6 +61,17 @@ import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHe
             // end of slider
 
 
+
+
+            // lAZY LOAD GALLERY IMAGES
+            $("img.lazyload").lazyload({
+
+                load : function(elements_left, settings) {
+                    console.log(elements_left);
+
+                }
+
+            });
 
 
 

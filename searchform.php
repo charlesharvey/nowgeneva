@@ -1,6 +1,7 @@
 <!-- search -->
-<form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-	<input class="search-input" type="search" name="s" placeholder="<?php _e( 'To search, type and hit enter.', 'webfactor' ); ?>">
-	<button class="search-submit" type="submit" role="button"><?php _e( 'Search', 'webfactor' ); ?></button>
+<form id="search_form" class="search" method="get" action="<?php echo home_url(); ?>" role="search">
+	<input placeholder="chercher dans le site..." class="search-input" type="text" name="s">
+	<input type="submit"  class="button" value="Chercher"  />
+	<a href="#" id="close_search_form">&#x2716;</a>
 </form>
 <!-- /search -->
