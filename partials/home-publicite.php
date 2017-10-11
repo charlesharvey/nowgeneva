@@ -5,13 +5,14 @@
 
 
 <div class="container">
-    <div class="advert">
-        <img src="<?php echo $image; ?>"  alt="<?php echo get_the_title(); ?>">
-        <div class="advert_text">
-            <p><?php echo get_the_content(); ?></p>
-        </div>
-    </div>
-
+  <a target="_blank" href="<?php echo get_field('link');?>">
+      <div class="advert">
+          <img src="<?php echo $image; ?>"  alt="<?php echo get_field('text'); ?>">
+          <div class="advert_text">
+              <p><?php echo get_field('text'); ?></p>
+          </div>
+      </div>
+    </a>
 
 </div>
 
