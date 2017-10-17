@@ -1,5 +1,7 @@
 <?php
 
+
+$get_cat = (isset($_GET['cat'] )) ? $_GET['cat'] : false;
 $page_url = get_permalink( get_page_by_path( 'boutiques' ) );
 
 $boutique_cats = get_terms( array(
@@ -15,7 +17,9 @@ $boutique_cats = get_terms( array(
         <a href="<?php echo $page_url; ?>">All</a>
     </li>
 <?php foreach ($boutique_cats as $cat) : ?>
-    <li class="boutique_cat">
+    <?php $cat_class = ( $get_cat == $cat->slug  ) ?  'current_cat'  : ''; ?>
+    <li class="boutique_cat <?php echo $cat_class; ?>">
+
         <a href="<?php echo $page_url; ?>?cat=<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></a>
     </li>
 <?php endforeach; ?>

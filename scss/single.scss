@@ -20,10 +20,17 @@
 
 #map_container {
     height: 300px;
-    margin:0 0 0px;
 
+    margin: 0;
 }
 
+
+@media (min-width: 768px) {
+
+    #map_container {
+margin:0 0 0 30px;
+    }
+}
 
 
 
@@ -101,7 +108,8 @@
 
 .info_map {
     border: 2px solid $font_color;
-    margin: 100px 0 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     padding: 0px;
 }
 
@@ -132,11 +140,20 @@
     }
 
     h6 {
-        font-weight: bold; font-size: 1.8em; margin-bottom: 5px;
+        font-weight: bold; font-size: 1.8em; margin-bottom: 0px; margin-top:15px;
     }
 
 }
 
+@media (min-width: 768px) {
+.infos_boutique {
+h6 {
+    margin: 0;
+}
+
+}
+
+}
 
 
 
@@ -170,11 +187,24 @@
             float:right;
         }
 
+        h4 {
+            padding: 0 0 5px;
+            margin: 0;
+        }
+
         a {
             border: 0;
         }
 
     }
+
+}
+
+h4.subtitled {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    padding: 0 0 15px;
 
 }
 

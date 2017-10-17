@@ -16,15 +16,20 @@
 
             if ($post_type == 'featured') {
 
-                $str .= '<a class="post_from_shop_image" href="' . $permalink .'">
-                <img src="' . $image . '" alt="">
-                <span class="macaron">Portrait - '. $title .'</span>
-                </a>';
-                $str .= '<h4><a href="' . $permalink .'">' .  $title . '</a></h4>';
-                $str .= '<p>' . $excerpt . '...</p>';
+                if (sizeof($featured < 1 )) { // only show one featued post
+
+                    $str .= '<a class="post_from_shop_image" href="' . $permalink .'">
+                    <img src="' . $image . '" alt="">
+                    </a>';
+                    $str .= '<h4><a href="' . $permalink .'">' .  $title . '</a></h4>';
+                    $str .= '<p>' . $excerpt . '...</p>';
+
+                    //<span class="macaron">Portrait - '. $title .'</span>
 
 
-                array_push($featured, $str);
+                    array_push($featured, $str);
+                }
+
 
             } else {
                 $str .= '<li class="posts_from_shop_item">';
@@ -46,16 +51,18 @@
         <?php endwhile; ?>
 
 
-<?php endif; ?>
+<?php endif; wp_reset_query(); ?>
 
     <h2> <span>Plus sur <?php echo get_the_title(); ?> </span></h2>
 <div class="row" >
     <div class="col-sm-6">
+        <h4 class="subtitled">Portrait </h4>
         <div class="featured_post_about_shop post_shop_cont_match">
             <?php echo  implode($featured , ''); ?>
             </div>
     </div>
     <div class="col-sm-6">
+        <h4 class="subtitled">On en parle</h4>
         <div class="posts_from_shop_container post_shop_cont_match">
             <ul class="posts_from_shop_list">
                 <?php echo  implode($normal , ''); ?>
