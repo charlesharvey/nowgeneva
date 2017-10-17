@@ -18,7 +18,7 @@
 
                 $str .= '<a class="post_from_shop_image" href="' . $permalink .'">
                 <img src="' . $image . '" alt="">
-                <span class="macaron">Portrait of '. $title .'</span>
+                <span class="macaron">Portrait - '. $title .'</span>
                 </a>';
                 $str .= '<h4><a href="' . $permalink .'">' .  $title . '</a></h4>';
                 $str .= '<p>' . $excerpt . '...</p>';

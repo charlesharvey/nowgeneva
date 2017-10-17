@@ -47,6 +47,7 @@ h1 {
 h3 {
     font-size: 3em;
     padding: 0 0 30px;
+    line-height: 130%;
 }
 
 h4 {
@@ -54,11 +55,21 @@ h4 {
     padding: 0 0 20px;
 }
 
+h6 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin:-15px 0 20px;
+}
 
 p  {
     font-size: $font_size;
     line-height: 170%;
     padding:0 0 30px;
+}
+
+
+div.wp-caption {
+    width: 100%!important;
 }
 
 li {

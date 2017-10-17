@@ -35,7 +35,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'webfactor' ); ?></h2>
+		<h4 style="text-align:center;"><?php _e( 'Aucun article ne correspond aux termes recherchés', 'webfactor' ); ?></h4>
 	</article>
 	<!-- /article -->
 

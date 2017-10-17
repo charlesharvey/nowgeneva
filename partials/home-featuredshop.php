@@ -8,7 +8,7 @@
     <div class="advert">
         <?php $boutique_link = get_field('boutique'); ?>
 
-        <a href="<?php echo ($boutique_link); ?>">
+        <a target="_blank" href="<?php echo ($boutique_link); ?>">
         <img src="<?php echo $image; ?>"  alt="<?php echo get_the_title(); ?>">
         </a>
         <div class="advert_text">

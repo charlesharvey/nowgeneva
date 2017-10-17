@@ -8,7 +8,6 @@
 
                             <div class="col-sm-4">
                                 <h4>Suivez-nous</h4>
-                                <p>Se hic fidelissimae e se eram nulla elit aliquip.</p>
                                 <ul class="social_nav">
                                     <li ><a class="icon_facebook" href="#">Facebook</a></li>
                                     <li><a class="icon_pinterest" href="#">Pinterest</a></li>
@@ -18,7 +17,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Newsletter</h4>
-                                <p>Legam hic appellat ita quem mandaremus pariatur.</p>
+                                <p>Inscrivez-vous et accédez aux offres exclusives NowGeneva</p>
                                 <form action="#">
                                     <input name="s" type="text" placeholder="enter your email">
                                     <button >Envoyer</button>
@@ -26,7 +25,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p>15 rue Verdaine <br>1204 Genève <br>Tel: 12345 123465 <br /> Email: <a href="mailto:contact@nowgeneva.com">contact@nowgeneva.com</a> </p>
+                                <p><strong>Annonceurs:</strong><br>Email: <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br><strong>Rédaction:</strong><br>Email: <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a><br>Tel:<a href="tel:+ 41 76 3696117">+ 41 76 3696117</a> </p>
                             </div>
                         </div>
 

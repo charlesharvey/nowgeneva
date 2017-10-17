@@ -92,7 +92,7 @@ array_push($chilly_supermenus, $supermenu);
              <?php chilly_nav('primary-navigation'); ?>
 
             <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="#">Portraits</a></li>
-            <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="#">POP-UP EVENTS</a></li>
+            <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="#">EVENTS &amp; VENTES</a></li>
 
 
         </ul>

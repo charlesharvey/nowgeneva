@@ -92,9 +92,12 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
         })
 
-        $('#rest_of_site').on('mouseover', function(){
+				$('#rest_of_site').on('mouseover', function(){
             $('.supermenu').removeClass('hovered');
         })
+				$('header').on('mouseover', function(){
+						$('.supermenu').removeClass('hovered');
+				})
 
 
 
