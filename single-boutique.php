@@ -33,19 +33,25 @@
                             <h2><span><?php the_title(); ?></span></h2>
                             <div class="boutique_tags"><?php echo get_field('extra'); ?></div>
                             <div class="row">
-                              <div class="col-sm-6">
+                                <?php if(get_field('when')){ ?>
+                                  <div class="col-sm-7">
+                                    <?php echo '<h6>Horaires d\'ouverture</h6>' . get_field('when'); ?>
+                                  </div>
+                                <?php } ?>
+                              <div class="col-sm-5">
                                 <h6>Contact</h6>
                                   <?php if(get_field('address')){ echo '<p>' . get_field('address') . '</p>'; } ?>
                                   <?php if(get_field('website')){ echo '<p><a href="' . get_field('website') . '" target="_blank">' . get_field('website') . '</a></p>'; } ?>
+                                  <?php if(get_field('email')){ echo '<p><a href="' . get_field('phone') . '" target="_blank">' . get_field('email') . '</a></p>'; } ?>
                                   <?php if(get_field('phone')){ echo '<p>' . get_field('phone') . '</p>'; } ?>
                               </div>
-                                <div class="col-sm-6">
-                                    <?php if(get_field('when')){ echo '<h6>Horaires d\'ouverture</h6>' . get_field('when'); } ?>
-                                </div>
                             </div>
                             <?php if(get_field('social_media')){ ?>
-                              <h6>Suivez <?php the_title(); ?></h6>
-                              <?php if(get_field('facebook')){ echo '<a class="social_media" target="_blank" href=">' . get_field('facebook') . '</"</a>"'; } ?>
+                              <hr>
+                              <?php if(get_field('facebook')){ echo '<a class="social_media facebook" target="_blank" href="' . get_field('facebook') . '"><i class="fa fa-facebook" aria-hidden="true"></i></a>'; } ?>
+                              <?php if(get_field('twitter')){ echo '<a class="social_media twitter" target="_blank" href="' . get_field('twitter') . '"><i class="fa fa-twitter" aria-hidden="true"></i></a>'; } ?>
+                              <?php if(get_field('instagram')){ echo '<a class="social_media instagram" target="_blank" href="' . get_field('instagram') . '"><i class="fa fa-instagram" aria-hidden="true"></i></a>'; } ?>
+                              <?php if(get_field('pinterest')){ echo '<a class="social_media pinterest" target="_blank" href="' . get_field('pinterest') . '"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>'; } ?>
                             <?php  } ?>
                         </div>
                     </div>
