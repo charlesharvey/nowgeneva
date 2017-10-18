@@ -78,6 +78,7 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
         $('.post_shop_cont_match').matchHeight();
+        $('.match_map').matchHeight();
 
 
 

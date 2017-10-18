@@ -14,7 +14,7 @@ $boutique_cats = get_terms( array(
 <div class="container">
 <ul class="boutique_cats">
     <li class="boutique_cat">
-        <a href="<?php echo $page_url; ?>">All</a>
+        <a href="<?php echo $page_url; ?>">Toutes</a>
     </li>
 <?php foreach ($boutique_cats as $cat) : ?>
     <?php $cat_class = ( $get_cat == $cat->slug  ) ?  'current_cat'  : ''; ?>

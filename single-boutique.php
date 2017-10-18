@@ -29,7 +29,7 @@
             <div class="info_map">
                 <div class="row" >
                     <div class="col-sm-6">
-                        <div class="infos_boutique">
+                        <div class="infos_boutique match_map">
                             <h2><span><?php the_title(); ?></span></h2>
                             <div class="boutique_tags"><?php echo get_field('extra'); ?></div>
                             <div class="row">
@@ -40,10 +40,15 @@
                                 <?php } ?>
                               <div class="col-sm-5">
                                 <h6>Contact</h6>
-                                  <?php if(get_field('address')){ echo '<p>' . get_field('address') . '</p>'; } ?>
-                                  <?php if(get_field('website')){ echo '<p><a href="' . get_field('website') . '" target="_blank">' . get_field('website') . '</a></p>'; } ?>
-                                  <?php if(get_field('email')){ echo '<p><a href="' . get_field('phone') . '" target="_blank">' . get_field('email') . '</a></p>'; } ?>
-                                  <?php if(get_field('phone')){ echo '<p>' . get_field('phone') . '</p>'; } ?>
+
+                                <?php $address = get_field('address'); ?>
+                                <?php $website = get_field('website'); ?>
+                                <?php $email = get_field('email'); ?>
+                                <?php $phone = get_field('phone'); ?>
+                                  <?php if($address){ echo '<p>' . $address . '</p>'; } ?>
+                                  <?php if($website){ echo '<p><a href="' . $website . '" target="_blank">' . $website . '</a></p>'; } ?>
+                                  <?php if($email){ echo '<p><a href="mailto:' . $email . '" target="_blank">' . $email . '</a></p>'; } ?>
+                                  <?php if($phone){ echo '<p>' . $phone . '</p>'; } ?>
                               </div>
                             </div>
                             <?php if(get_field('social_media')){ ?>
@@ -56,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div id="map_container"></div>
+                        <div id="map_container" class="match_map"></div>
                         <script type='text/javascript'>
                         var location_address = '<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_field("lat_lng"))); ?>' ;
                         </script>
@@ -67,6 +72,7 @@
             </div>
 
 
+            <?php get_template_part('partials/single', 'events-from-shop'); ?>
             <?php get_template_part('partials/single', 'posts-from-shop'); ?>
 
 
