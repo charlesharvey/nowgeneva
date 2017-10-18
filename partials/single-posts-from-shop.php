@@ -56,13 +56,13 @@
     <h2> <span>Plus sur <?php echo get_the_title(); ?> </span></h2>
 <div class="row" >
     <div class="col-sm-6">
-        <h4 class="subtitled">Portrait </h4>
+        <h4 class="subtitled">- Portrait -</h4>
         <div class="featured_post_about_shop post_shop_cont_match">
             <?php echo  implode($featured , ''); ?>
             </div>
     </div>
     <div class="col-sm-6">
-        <h4 class="subtitled">On en parle</h4>
+        <h4 class="subtitled">- On en parle -</h4>
         <div class="posts_from_shop_container post_shop_cont_match">
             <ul class="posts_from_shop_list">
                 <?php echo  implode($normal , ''); ?>

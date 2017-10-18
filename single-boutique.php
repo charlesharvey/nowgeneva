@@ -33,17 +33,20 @@
                             <h2><span><?php the_title(); ?></span></h2>
                             <div class="boutique_tags"><?php echo get_field('extra'); ?></div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <?php if(get_field('when')){ echo '<h6>Quand</h6>' . get_field('when'); } ?>
-                                </div>
-                                <div class="col-sm-4">
-                                    <?php if(get_field('address')){ echo '<h6>Où</h6>' . get_field('address'); } ?>
-                                </div>
-                                <div class="col-sm-4">
-                                    <?php if(get_field('website')){ echo '<h6>Contact</h6><p><a href="' . get_field('website') . '" target="_blank">' . get_field('website') . '</a></p>'; } ?>
-                                    <?php if(get_field('phone')){ echo '<p>' . get_field('phone') . '</p>'; } ?>
+                              <div class="col-sm-6">
+                                <h6>Contact</h6>
+                                  <?php if(get_field('address')){ echo '<p>' . get_field('address') . '</p>'; } ?>
+                                  <?php if(get_field('website')){ echo '<p><a href="' . get_field('website') . '" target="_blank">' . get_field('website') . '</a></p>'; } ?>
+                                  <?php if(get_field('phone')){ echo '<p>' . get_field('phone') . '</p>'; } ?>
+                              </div>
+                                <div class="col-sm-6">
+                                    <?php if(get_field('when')){ echo '<h6>Horaires d\'ouverture</h6>' . get_field('when'); } ?>
                                 </div>
                             </div>
+                            <?php if(get_field('social_media')){ ?>
+                              <h6>Suivez <?php the_title(); ?></h6>
+                              <?php if(get_field('facebook')){ echo '<a class="social_media" target="_blank" href=">' . get_field('facebook') . '</"</a>"'; } ?>
+                            <?php  } ?>
                         </div>
                     </div>
                     <div class="col-sm-6">
