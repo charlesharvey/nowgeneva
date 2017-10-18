@@ -58,7 +58,7 @@
                     <div class="col-sm-6">
                         <div id="map_container"></div>
                         <script type='text/javascript'>
-                        var location_address = '<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_field("address"))); ?>' ;
+                        var location_address = '<?php echo preg_replace( "/\r|\n/", "", strip_tags(get_field("lat_lng"))); ?>' ;
                         </script>
 
                     </div>
