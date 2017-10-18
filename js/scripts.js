@@ -108,7 +108,10 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
         // MAP
         if (typeof location_address != 'undefined' && location_address != '' ) {
 
+            google.maps.event.addDomListener(window, 'load', initialize);
 
+
+            function initialize() {
                     var map_theme = [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}];
 
                     var map_options = {
@@ -127,11 +130,16 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
                         width : '100%'
                     })
 
+
                     var location_map = new google.maps.Map(location_map_container.get(0), map_options);
                     // var infowindow = new google.maps.InfoWindow({content: ''});
                     var geocoder = new google.maps.Geocoder();
+                    var infowindow = new google.maps.InfoWindow;
 
-                    codeAddress(location_address, location_map);
+
+                    codeAddress(location_address, location_map, geocoder, infowindow);
+
+            }
 
 
                 }; // END  IF location_address
@@ -139,15 +147,26 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
         // END OF MAP
 
 
-        function codeAddress(address,map) {
+        function codeAddress(address,map, geocoder, infowindow) {
+
+            var icon_url = 'https://webfactor.ch/projets/nowgeneva/wp-content/themes/nowgeneva/img/location.svg';
 
             geocoder.geocode( { 'address': address}, function(results, status) {
               if (status == 'OK') {
+
                 map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
+                   map: map,
+                    title: 'Shop',
+                    position: results[0].geometry.location,
+                    icon: icon_url,
+
                 });
+
+               marker.setMap(map);
+            //   infowindow.setContent(results[0].formatted_address);
+              // infowindow.open(map, marker);
+
               } else {
                 alert('Geocode was not successful for the following reason: ' + status);
               }
