@@ -88,7 +88,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.0.3';
+  return '0.0.2';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -545,6 +545,10 @@ function get_posts_from_shop_id($shop_id) {
     wp_reset_query();
     return $shop_posts;
 
+
+
+
+
 }
 
 
@@ -561,14 +565,21 @@ function get_events_from_shop_id($shop_id) {
         FROM wp_postmeta
         LEFT JOIN wp_posts ON wp_postmeta.post_id = wp_posts.ID
         WHERE post_type = "event"
+        AND post_status="publish"
         AND meta_key = "boutiques"
         AND meta_value LIKE ' . $shop , OBJECT );
 
-    $post_ids = array_map( 'get_post_id_from_wpdb',  $results );
-    $shop_events = new WP_Query( array( 'post_type' => 'event', 'post__in' => $post_ids ) );
-    wp_reset_query();
-    return $shop_events;
+        $post_ids = array_map( 'get_post_id_from_wpdb',  $results );
 
+        if (sizeof($post_ids) == 0) {
+            $post_ids = array(0);
+        }
+        $shop_events = new WP_Query( array( 'post_type' => 'event', 'post__in' => $post_ids ) );
+        return $shop_events;
+
+
+
+// SELECT post_id, post_status FROM wp_postmeta LEFT JOIN wp_posts ON wp_postmeta.post_id = wp_posts.ID WHERE post_type = "event" AND post_status="publish" AND meta_key = "boutiques" AND meta_value LIKE "%134%"
 }
 
 
