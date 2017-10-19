@@ -32,13 +32,17 @@ $default_image = get_template_directory_uri()  . '/img/default.png';
             <article class="single_boutique" >
                 <?php $title = get_the_title(); ?>
                 <?php $logo = get_field('logo'); ?>
-                <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'medium') : $default_image; ?>
-                <a   class="boutique_image" href="<?php the_permalink(); ?>"  title="<?php $title; ?>">
+                <?php //$image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'medium') : $default_image; ?>
+                <!-- <a   class="boutique_image" href="<?php the_permalink(); ?>"  title="<?php $title; ?>">
                     <img class="lazyload" data-original="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
 
-                    <?php if ($logo): ?>
+                    <?php// if ($logo): ?>
                         <div class="logo" style="background-image:url(<?php echo $logo['sizes']['medium']; ?>);"></div>
-                    <?php endif; // end of if logo ?>
+                    <?php //endif; // end of if logo ?>
+                </a> -->
+
+                <a href="<?php the_permalink(); ?>"  title="<?php $title; ?>">
+                  <img src="<?php echo $logo['sizes']['medium']; ?>">
                 </a>
 
                 <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h3>

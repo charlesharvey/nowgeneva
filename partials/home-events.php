@@ -23,12 +23,12 @@ $evenements = new WP_Query(array(
                 <?php $place = get_field('place'); ?>
                 <li class="event">
                     <div class="row">
-                        <div class="col-sm-3 col-sm-push-1">
+                        <div class="col-sm-2 col-sm-push-1">
                             <a href="<?php echo $url; ?>" class="event_image">
                                 <img src="<?php echo $image; ?>"/>
                             </a>
                         </div>
-                        <div class="col-sm-7 col-sm-push-1">
+                        <div class="col-sm-8 col-sm-push-1">
                             <h4><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h4>
 
                             <p class="time_location">

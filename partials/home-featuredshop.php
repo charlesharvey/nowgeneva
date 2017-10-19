@@ -12,7 +12,7 @@
         <img src="<?php echo $image; ?>"  alt="<?php echo get_the_title(); ?>">
         </a>
         <div class="advert_text">
-            <p><a href="<?php echo ($boutique_link); ?>"><?php echo get_the_title(); ?></a></p>
+            <h2 style="font-size:2em; margin:0;"><a href="<?php echo ($boutique_link); ?>"><?php echo get_the_title(); ?></a></h2>
 
         </div>
     </div>
