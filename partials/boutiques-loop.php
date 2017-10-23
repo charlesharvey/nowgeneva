@@ -42,7 +42,7 @@ $default_image = get_template_directory_uri()  . '/img/default.png';
                 </a> -->
 
                 <a href="<?php the_permalink(); ?>"  title="<?php $title; ?>">
-                  <img src="<?php echo $logo['sizes']['medium']; ?>">
+                  <img class="logo_boutique" src="<?php echo $logo['sizes']['medium']; ?>">
                 </a>
 
                 <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo $title; ?></a></h3>

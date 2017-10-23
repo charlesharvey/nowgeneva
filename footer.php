@@ -9,9 +9,9 @@
                             <div class="col-sm-4">
                                 <h4>Suivez-nous</h4>
                                 <ul class="social_nav">
-                                    <li ><a class="icon_facebook" href="#">Facebook</a></li>
-                                    <li><a class="icon_pinterest" href="#">Pinterest</a></li>
-                                    <li><a class="icon_instagram" href="#">Instagram</a></li>
+                                    <li ><a target="blank"  class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
+                                    <li><a target="blank"  class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
+                                    <li><a target="blank"  class="icon_instagram" href="https://www.instagram.com/nowgeneva/">Instagram</a></li>
                                 </ul>
 
                             </div>
