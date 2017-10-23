@@ -53,12 +53,18 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
             // slider
-            var slideWidth = ($('.container').width() / 3) - 15;
-            console.log(slideWidth);
+            var contWidth = $('.container').width();
+            var slideWidth = ( contWidth / 3) - 15;
+            var noSlides = 3;
+            if (slideWidth < 200) {
+                 noSlides = 1;
+                 slideWidth = contWidth;
+            }
+
             $('.bxslider').bxSlider({
             //   pagerCustom: '#bx-pager',
-                minSlides: 3,
-                maxSlides: 3,
+                minSlides: noSlides,
+                maxSlides: noSlides,
                 moveSlides: 1,
                 slideMargin: 30,
                 //     adaptiveHeight: true,
