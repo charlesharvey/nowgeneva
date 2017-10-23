@@ -9,7 +9,7 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 		'use strict';
 
-
+        console.log('is this working?');
 
 
 
@@ -53,10 +53,18 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
             // slider
-                $('.bxslider').bxSlider({
-                     pagerCustom: '#bx-pager',
-                     adaptiveHeight: true,
-                });
+            var slideWidth = ($('.container').width() / 3) - 15;
+            console.log(slideWidth);
+            $('.bxslider').bxSlider({
+            //   pagerCustom: '#bx-pager',
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 30,
+                //     adaptiveHeight: true,
+                pager: false,
+                slideWidth: slideWidth
+            });
 
             // end of slider
 

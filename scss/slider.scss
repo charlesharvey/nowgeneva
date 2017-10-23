@@ -1,18 +1,36 @@
 .bx-wrapper {
     position: relative;
+    padding: 0 40px 30px;
 }
 
 .bxslider {
     position: relative;
     margin-top:30px;
+
 }
 .single_slide {
     font-size: 1em;
-    padding:0;
-    color: white;
-    position: relative;
-    overflow:hidden;
+    padding:0 0 30px;
 
+    position: relative;
+
+
+    .article_image {
+        height: 200px;
+        margin: 0 0 10px;
+    }
+
+
+    .category {
+        border: 0;
+        font-size: 10px;
+        margin: -17px 0 0;
+        display: block;
+        color: #888;
+        a {
+            border:0;
+        }
+    }
 
 
     .background_blur {
@@ -41,6 +59,10 @@
         }
     }
 
+    p {
+        padding: 0;
+    }
+
     .slide_content {
         padding: 0  10px 10px;
     }
@@ -55,11 +77,11 @@
 
 
 @media (min-width: 768px) {
-.single_slide {
-    .slide_content {
-        padding: 40px 20px 0 0;
+    .single_slide {
+        .slide_content {
+            padding: 40px 20px 0 0;
+        }
     }
-}
 
 }
 
@@ -67,6 +89,7 @@
     text-align: center;
 
     padding: 0 50px;
+    margin:0 0 50px;
 
     a {
         padding: 2px;
@@ -92,6 +115,18 @@
     }
 }
 
+.buy_link {
+    background: url('../img/cart.svg') no-repeat 1px center;
+    padding: 10px 18px 11px 29px;
+    background-size: 21px;
+    border: 0;
+    border-radius: 6px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+
+}
+
 .bx-controls-direction a {
 
     appearance:none;
@@ -102,7 +137,8 @@
     border: 0;
     text-indent: -9999px;
     position: absolute;
-    bottom:-90px;
+
+    top: 90px;
     left: 0;
     z-index: 2;
     cursor: pointer;
@@ -111,7 +147,7 @@
     &.bx-next {
         background-image: url('../img/chevron-r.svg');
         left: auto;
-        right: 0;
+        right:0;
     }
     &.bx-prev {
 
