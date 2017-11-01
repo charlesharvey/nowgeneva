@@ -93,6 +93,15 @@ a {
     }
 }
 
+h1,h2,h3,h4,h5,h6  {
+    a {
+        color: $font_color;
+        &:link, &:visited, &:active {
+            color: $font_color;
+        }
+    }
+}
+
 strong, b {
     font-weight: bold;
 }

@@ -69,9 +69,7 @@ img{
             font-size: 2.3em;
             padding: 0 0 5px;
 
-            a {
-            //    color: inherit;
-            }
+
         }
     }
     .read_more {
@@ -106,6 +104,12 @@ img{
 
             a {
                 border: 0;
+            }
+
+            h3 {
+                a {
+                    color: white;
+                }
             }
 
             p {
