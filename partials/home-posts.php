@@ -23,19 +23,25 @@ $posts = new WP_Query(array(
                 <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
                 <?php $image_caption = ( has_post_thumbnail()) ? get_post(get_post_thumbnail_id())->post_excerpt : ''; ?>
                 <?php $url = get_the_permalink(); ?>
-                <article class="featured_article" style="background-image:url('<?php echo $image; ?>')">
+                <?php   $excerpt = explode(' ', strip_tags( get_the_excerpt()));
+                       $excerpt = implode(' ',  array_slice($excerpt, 0, 35) ); ?>
+
+
+                <article class="featured_article">
+                    <a href="<?php echo $url; ?>" class="article_image" style="background-image:url('<?php echo $image;?>')">
+                    </a>
 
                     <div class="article_text">
 
-                        <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
-                        <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
-                        <?php if (sizeof($categories) > 0) : ?>
-                        <p class="category"><?php echo ($categories[0]->name); ?></p>
-                        <?php endif; ?>
-                        <p><?php echo get_the_excerpt(); ?></p>
-                        <p><a href="<?php echo $url; ?>" class="button button_light">Lire plus</a></p>
+                    <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
+                    <?php if (sizeof($categories) > 0) : ?>
+                    <p class="category"><?php echo ($categories[0]->name); ?></p>
+                    <?php endif; ?>
+                    <p><?php echo $excerpt; ?></p>
+                    <p class="read_more"><a href="<?php echo $url; ?>" class="button button_light">Lire plus</a></p>
+
                     </div>
-                    <div class="caption"><?php echo $image_caption; ?></div>
+
                 </article>
 
                 <div class="other_articles">
