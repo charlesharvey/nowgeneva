@@ -98,10 +98,10 @@ array_push($chilly_supermenus, $supermenu);
 
         </ul>
 
-
+  </div> <!-- END OF CONTAINER -->
     <div id="supermenu_container">
         <?php echo implode("\n", $chilly_supermenus); ?>
     </div>
 
-  </div>
+
 </nav>

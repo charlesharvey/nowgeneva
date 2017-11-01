@@ -50,7 +50,7 @@ $default_image = get_template_directory_uri()  . '/img/default.png';
                 <?php if (sizeof($categories) > 0) : ?>
                     <p class="category"><?php echo ($categories[0]->name); ?></p>
                 <?php endif; ?>
-                <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+
             </article>
         </div>
 
