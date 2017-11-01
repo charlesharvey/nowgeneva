@@ -32,7 +32,7 @@
                                 <li ><a target="_blank" class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
                                 <li><a target="_blank" class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
                                 <li><a target="_blank" class="icon_instagram" href="https://www.instagram.com/nowgeneva/">Instagram</a></li>
-                                <li><a target="_blank" class="subscription"  href="#">Abonnez-vous</a></li>
+                                <li><a id="open_subscription" class="subscription"  href="#">Abonnez-vous</a></li>
                             </ul>
                             <!-- <form action="#"><input name="s" type="text" placeholder="search this site..."></form> -->
                         </div>
@@ -41,6 +41,7 @@
             </header>
 
              <?php get_template_part('searchform'); ?>
-             <?php get_template_part('nav'  )   ?>
+             <?php get_template_part('nav'); ?>
+             <?php get_template_part('signupform'); ?>
 
 <div id="rest_of_site">

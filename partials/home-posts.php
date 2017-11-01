@@ -51,6 +51,8 @@ $posts = new WP_Query(array(
                         <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
                         <?php $url = get_the_permalink(); ?>
                         <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
+                        <?php   $excerpt = explode(' ', strip_tags( get_the_excerpt()));
+                               $excerpt = implode(' ',  array_slice($excerpt, 0, 35) ); ?>
                         <div class="col-sm-4">
                             <article>
                                 <a href="<?php echo $url; ?>" class="article_image" style="background-image:url('<?php echo $image;?>')">
@@ -60,7 +62,7 @@ $posts = new WP_Query(array(
                                 <?php if (sizeof($categories) > 0) : ?>
                                 <p class="category"><?php echo ($categories[0]->name); ?></p>
                                 <?php endif; ?>
-                                <p><?php echo get_the_excerpt(); ?></p>
+                                <p><?php echo $excerpt; ?></p>
 
                             </article>
 

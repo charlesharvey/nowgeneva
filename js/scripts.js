@@ -50,6 +50,22 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
 
+            var $open_subscription = $('#open_subscription');
+            var $signup_form_outer = $('#signup_form_outer');
+            var $signup_form = $('#signup_form');
+            $open_subscription.on('click', function(e){
+                e.preventDefault();
+    			$signup_form_outer.addClass('visible');
+    		});
+
+            $signup_form_outer.on('click', function(e){
+                $signup_form_outer.removeClass('visible');
+            })
+
+            $signup_form.on('click', function(e){
+                e.stopPropagation();
+            })
+
 
 
             // slider
