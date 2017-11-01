@@ -1,6 +1,8 @@
 <?php
 $chilly_supermenus = array();
 
+$home_url = get_home_url();
+
 $categories = get_terms( array(
        'hide_empty' => false,
        'taxonomy' => 'category',
@@ -14,9 +16,9 @@ $portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 )
 $supermenu = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
 $supermenu .= '<div class="col-sm-3"><blockquote>Aute doctrina nam laborum, ad amet singulis eiusmod.Aut cernantur graviterque ubi cernantur te dolor.</blockquote></div>';
 foreach ( $portraits as $post ) : setup_postdata( $post );
-$image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
-$permalink = get_the_permalink();
-$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
+  $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+  $permalink = get_the_permalink();
+  $supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
 endforeach; wp_reset_postdata();
 $supermenu .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu);
@@ -70,7 +72,7 @@ array_push($chilly_supermenus, $supermenu);
                  $supermenu .= '<div class="container"><div class="row">';
                  $supermenu .= '<div class="col-sm-3"><ul>';
                     foreach ($child_cats as $child_cat) {
-                        $supermenu .= '<li><a href="'. $child_cat->slug .'">'. $child_cat->name   . '</a></li>';
+                        $supermenu .= '<li><a href="'.  $home_url . '/category/'. $child_cat->slug .'">'. $child_cat->name   . '</a></li>';
                     };
                  $supermenu .= ' </ul></div>';
                  foreach ( $latest as $post ) : setup_postdata( $post );
@@ -85,7 +87,7 @@ array_push($chilly_supermenus, $supermenu);
 
                   ?>
             <li  class="supermenu_li" data-supermenu="<?php echo $slug; ?>">
-                <a  href="#"><?php echo $category->name; ?></a>
+                <a  href="<?php echo  $home_url; ?>/category/<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
             </li>
             <?php array_push($chilly_supermenus, $supermenu); ?>
             <?php endforeach; ?>
