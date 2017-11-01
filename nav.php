@@ -51,8 +51,9 @@ array_push($chilly_supermenus, $supermenu);
 
 
  ?>
-    <div class="container">
+
 <nav id="site_nav">
+        <div class="container">
     <a href="#" id="open_nav">Menu</a>
 
 
@@ -102,7 +103,5 @@ array_push($chilly_supermenus, $supermenu);
         <?php echo implode("\n", $chilly_supermenus); ?>
     </div>
 
-
-</nav>
-
   </div>
+</nav>

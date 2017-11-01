@@ -28,7 +28,7 @@
                         <a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                         <div id="social_and_search">
                             <ul class="social_nav">
-                                <li><a target="_blank" class="icon_search" href="#">Chercher</a></li>
+                                <li><a class="icon_search" href="#">Chercher</a></li>
                                 <li ><a target="_blank" class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
                                 <li><a target="_blank" class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
                                 <li><a target="_blank" class="icon_instagram" href="https://www.instagram.com/nowgeneva/">Instagram</a></li>
