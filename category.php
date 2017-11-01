@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section class="container">
 
-			<h1><span><?php _e( 'Categories for ', 'webfactor' ); single_cat_title(); ?></span></h1>
+			<h1><span><?php  single_cat_title(); ?></span></h1>
 
 			<?php get_template_part('loop'); ?>
 

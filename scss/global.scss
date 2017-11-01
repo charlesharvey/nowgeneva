@@ -94,8 +94,7 @@ img{
         .article_text {
             position: absolute;
             top: 0;
-            bottom: 0;
-            height: 100%;
+            bottom: 1px;
             padding: 20px;
             background: transparentize(black, 0.3);
             border-left: 1px solid transparentize(white,0.2);
