@@ -12,11 +12,15 @@
 // @import "../../node_modules/bxslider/dist/jquery.bxslider";
 
 
-body {
+body, body.archive {
     font-family: $font_stack;
     color: $brand_color;
     background-color: $background_color;
     font-size: 50%;
+    float: none;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 // div {max-width: 100%;}

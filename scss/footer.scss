@@ -39,41 +39,7 @@ footer {
         }
     }
 
-    form {
-        display: flex;
-        margin:20px 10px 30px;
-        .inf-main {width: 100%;}
-        .inf-input.inf-input-text {
-            width: calc(100% - 40px);
-            float: left;
-        }
-        input  {
-            width: 100%;
-            margin: 0 0 10px 0;
-            background: darken(white,15);
-            border-radius: 10px 0 0 10px;
-            border:0;
-            font-size: 1.4em;
-            border-bottom: 1px solid  lighten($brand_color, 55);
 
-        }
-
-        .inf-submit input[type="submit"] {
-            font-size: $font_size;
-            background: url('../img/send.svg') no-repeat 41% 57% lighten($brand_color, 50);
-            background-size: 20px;
-            border-radius:  0 10px 10px 0;
-            width: 40px;
-            height: 35px;
-            appearance:none;
-            border:0;
-            text-indent: -9999px;
-            cursor: pointer;
-
-
-
-        }
-    }
 
 
 }
@@ -86,5 +52,41 @@ footer {
     p {
         font-size: 1.4em;
         opacity: 0.7;
+    }
+}
+
+form {
+    display: flex;
+    margin:20px 10px 30px;
+    .inf-main {width: 100%;}
+    .inf-input.inf-input-text {
+        width: calc(100% - 40px);
+        float: left;
+    }
+    input  {
+        width: 100%;
+        margin: 0 0 10px 0;
+        background: darken(white,15);
+        border-radius: 10px 0 0 10px;
+        border:0;
+        font-size: 1.4em;
+        border-bottom: 1px solid  lighten($brand_color, 55);
+
+    }
+
+    .inf-submit input[type="submit"] {
+        font-size: $font_size;
+        background: url('../img/send.svg') no-repeat 41% 57% lighten($brand_color, 50);
+        background-size: 20px;
+        border-radius:  0 10px 10px 0;
+        width: 40px;
+        height: 35px;
+        appearance:none;
+        border:0;
+        text-indent: -9999px;
+        cursor: pointer;
+
+
+
     }
 }

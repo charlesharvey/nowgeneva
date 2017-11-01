@@ -43,5 +43,8 @@
              <?php get_template_part('searchform'); ?>
              <?php get_template_part('nav'); ?>
              <?php get_template_part('signupform'); ?>
+					 </a>
+					 </div>
+					 </div>
 
 <div id="rest_of_site">

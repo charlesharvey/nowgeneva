@@ -583,7 +583,4 @@ function get_events_from_shop_id($shop_id) {
 }
 
 
-
-
-
 ?>

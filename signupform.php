@@ -1,7 +1,7 @@
 <div id="signup_form_outer">
 <div id="signup_form">
 <div id="signup_form_inner">
-    <h4>Newsletter</h4>
+    <h2><span>Newsletter</span></h2>
     <p>Inscrivez-vous et accédez aux offres exclusives NowGeneva</p>
     <form method="post" action="https://newsletter.infomaniak.com/external/submit" class="inf-form" target="_blank"><input type="email" name="email" style="display:none" /><input type="hidden" name="key" value="eyJpdiI6Imt0bUUremkzNGVXQTFtUysyajIzTTh4XC83ZW9cL1wvXC9LbUdyUHBtNG1zMjhnPSIsInZhbHVlIjoiaFVtTUM5TEdVbXFlcjhLQUkwZ1JQdklhZHV6amRWYXpqa3lvXC9CNEVRSWM9IiwibWFjIjoiMjcxODhmYTcxNTdkYWY3YTRiYTE4NTRmMjMyODFkOWRiZGJjZTVmM2VlYmUxYzg4ZjUwZmQ1ZjYzZDgxYzA3YiJ9">
       <input type="hidden" name="webform_id" value="2826">

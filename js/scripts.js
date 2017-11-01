@@ -9,9 +9,9 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 		'use strict';
 
+
+
         console.log('is this working?');
-
-
 
 			var $site_nav = $('#site_nav');
 			var $open_nav = $('#open_nav');
@@ -50,7 +50,7 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 
 
-            var $open_subscription = $('#open_subscription');
+            var $open_subscription = $('#open_subscription, a[href="#newsletter"]');
             var $signup_form_outer = $('#signup_form_outer');
             var $signup_form = $('#signup_form');
             $open_subscription.on('click', function(e){
