@@ -1,8 +1,38 @@
 <?php
 
+$is_front_page = is_front_page();
+
+// if on the custom page for events and vents
+$posts_per_page = -1;
+
+
+// if on the home page
+if ( $is_front_page  ) {
+    $posts_per_page = 3;
+};
+
 $evenements = new WP_Query(array(
     'post_type' => 'event',
-    'posts_per_page' =>  3
+     'posts_per_page' =>  $posts_per_page,
+      'meta_key' => 'start_date',
+      'orderby' => 'meta_value',
+      'order' => 'ASC',
+      'meta_query' => array(
+          'relation' => 'OR',
+          array(
+              'key' => 'start_date', // Check the start date field is
+              'value' => $today,
+              'compare' => '>=',
+              'type' => 'DATE'
+          ),
+          array(
+              'key' => 'end_date', // Check the start date field is
+              'value' => $today,
+              'compare' => '>=',
+              'type' => 'DATE'
+          ),
+
+      )
 ));
 ?>
 
@@ -10,8 +40,9 @@ $evenements = new WP_Query(array(
 <?php  if ($evenements->have_posts() ) :  ?>
     <div class="container">
 
-        <h2><span>Events &amp; Vente</span></h2>
-
+        <?php if ($is_front_page): ?>
+        <h2 ><span>Events &amp; Vente</span></h2>
+        <?php endif; ?>
         <ul class="events">
 
 

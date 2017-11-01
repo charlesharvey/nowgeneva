@@ -54,7 +54,14 @@ foreach ( $events as $post ) : setup_postdata( $post );
 $start_date = get_field('start_date');
 $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
 $permalink = get_the_permalink();
-$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.get_the_permalink().'">'. get_the_title()  .'</a></h3><p class="the_date">Le '. $start_date .'</p></div>';
+$place = get_field('place');
+$boutiques = get_field('boutiques');
+
+$title = ($boutiques) ?  $boutiques[0]->post_title : 'Boutique';
+$title .= ($place)   ? ' - ' . $place: '';
+
+
+$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.get_the_permalink().'">'. $title  .'</a></h3><p class="the_date">Le '. $start_date .'</p></div>';
 endforeach; wp_reset_postdata();
 $supermenu .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu);
@@ -103,7 +110,7 @@ array_push($chilly_supermenus, $supermenu);
              <?php chilly_nav('primary-navigation'); ?>
 
             <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="<?php echo  $home_url; ?>/portrait/">Portraits</a></li>
-            <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="<?php echo  $home_url; ?>/event/">EVENTS &amp; VENTES</a></li>
+            <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="<?php echo  $home_url; ?>/events-ventes/">EVENTS &amp; VENTES</a></li>
 
 
         </ul>
