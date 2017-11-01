@@ -84,8 +84,9 @@ a {
 
     text-decoration: none;
     transition: all $transition_time;
-    color: $brand_color;
-    border-bottom: 1px solid $font_color;
+    color: #bdbdbd;
+    // color: $brand_color;
+    // border-bottom: 1px solid $font_color;
 
     &:hover {
         text-decoration: none;
