@@ -18,7 +18,7 @@
                 <p class="single-category"><?php  echo $boutique_cats[0]->name; ?></p>
             <?php endif; ?>
             <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-6 col-md-6" style="padding-bottom:20px;">
                     <?php the_post_thumbnail();?>
                 </div>
                 <div class="col-sm-6 col-md-6">

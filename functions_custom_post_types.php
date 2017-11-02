@@ -190,6 +190,7 @@ function create_custom_post_types() {
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
+            'category'
         ) // Add Category and Post Tags support
     ));
 

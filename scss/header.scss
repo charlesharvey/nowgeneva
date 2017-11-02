@@ -401,12 +401,12 @@ ul.social_nav {
 }
 #signup_form {
     position: fixed;
-    width: 50%;
+    width: 540px;
+    max-width: calc(100% - 30px);
     min-height: 250px;
     top:100px;
     top:calc(50vh - 125px);
-    left:25%;
-    right:25%;
+    left:calc(50% - 270px);
     background: white;
     cursor: default;
     z-index: 3000;
@@ -426,9 +426,17 @@ ul.social_nav {
     }
     form {
       width: 400px;
+      max-width: 100%;
       margin: 20px auto 20px;
       input[type="text"] {background: white; border:1px solid #aeaeae;}
       input[type="text"] {height: 36px;}
 
     }
+}
+
+@media(max-width:570px){
+  #signup_form {
+    width: calc(100% - 30px);
+    left:15px;
+  }
 }

@@ -68,7 +68,7 @@ $evenements = new WP_Query(array(
                               <?php if ($place) echo ' - ' . $place; ?>
                             </a></h4>
 
-                            <p style="font-size:1.7em" class="time_location">
+                            <p class="home_tl time_location">
                               <?php echo get_the_title(); ?>
                             </p>
 

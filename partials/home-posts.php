@@ -34,6 +34,7 @@ $posts = new WP_Query(array(
                     <div class="article_text">
 
                     <h3><a href="<?php echo $url; ?>"><?php echo get_the_title(); ?></a></h3>
+                    <?php $categories = wp_get_post_terms( get_the_ID(), 'category');   ?>
                     <?php if (sizeof($categories) > 0) : ?>
                     <p class="category"><?php echo ($categories[0]->name); ?></p>
                     <?php endif; ?>

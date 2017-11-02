@@ -9,7 +9,7 @@
       <div class="advert">
           <img src="<?php echo $image; ?>"  alt="<?php echo get_field('text'); ?>">
           <div class="advert_text">
-              <h2 style="font-size:2em; margin:0;"><?php echo get_field('text'); ?></h2>
+              <h2 style="margin:0;"><?php echo get_field('text'); ?></h2>
           </div>
       </div>
     </a>
