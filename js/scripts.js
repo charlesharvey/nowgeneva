@@ -180,7 +180,16 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
         function codeAddress(address,map, geocoder, infowindow) {
 
-            var icon_url = 'https://webfactor.ch/projets/nowgeneva/wp-content/themes/nowgeneva/img/location.svg';
+
+
+            var google_icon =  {
+                url: 'https://webfactor.ch/projets/nowgeneva/wp-content/themes/nowgeneva/img/location.png',
+                scaledSize: new google.maps.Size(23, 31), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+                anchor: new google.maps.Point(12,31) // anchor
+
+            };
+
 
             geocoder.geocode( { 'address': address}, function(results, status) {
               if (status == 'OK') {
@@ -190,7 +199,7 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
                    map: map,
                     title: 'Shop',
                     position: results[0].geometry.location,
-                    icon: icon_url,
+                    icon: google_icon,
 
                 });
 
