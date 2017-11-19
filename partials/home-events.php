@@ -43,24 +43,28 @@ $evenements = new WP_Query(array(
         <?php if ($is_front_page): ?>
         <h2 ><span>Events &amp; Vente</span></h2>
         <?php endif; ?>
-        <ul class="events">
+        <ul class="bxslider">
 
 
             <?php  while($evenements->have_posts()) : $evenements->the_post();   ?>
-                <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'full') : ''; ?>
+                <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'rectangle') : ''; ?>
                 <?php $url = get_the_permalink(); ?>
                 <?php $start_date = get_field('start_date'); ?>
                 <?php $end_date = get_field('end_date'); ?>
                 <?php $place = get_field('place'); ?>
                 <?php $boutiques = get_field('boutiques'); ?>
-                <li class="event">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <a href="<?php echo $url; ?>" class="event_image">
-                                <img src="<?php echo $image; ?>"/>
-                            </a>
-                        </div>
-                        <div class="col-sm-9">
+                <li class="single_slide">
+
+
+
+                                    <div class="article_image_container">
+                                        <a href="<?php echo $url; ?>" class="">
+                                            <img src="<?php echo $image; ?>"/>
+                                        </a>
+                                    </div>
+
+
+
                             <h4><a href="<?php echo $url; ?>">
                               <?php if ($boutiques) echo $boutiques[0]->post_title; ?>
                               <?php if ($start_date) echo ' - ' . $start_date; ?>
@@ -72,12 +76,10 @@ $evenements = new WP_Query(array(
                               <?php echo get_the_title(); ?>
                             </p>
 
-
-
                             <p><?php //echo get_the_excerpt(); ?></p>
-                            <p><a style="margin-top:-20px" href="<?php echo $url; ?>" class="button">Lire plus</a></p>
-                        </div>
-                    </div>
+                            <!-- <p><a style="margin-top:-20px" href="<?php echo $url; ?>" class="button">Lire plus</a></p> -->
+
+
                 </li>
 
 

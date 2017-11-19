@@ -4,8 +4,6 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
 
 
-console.log(magnify);
-
 (function ($, root, undefined) {
 
 	$(function () {
@@ -112,8 +110,6 @@ console.log(magnify);
 
             // jquery magnify zooming on IMAGES
              var $zoom = $('.zoom').magnify();
-             console.log($zoom);
-
 
 
         $('.post_shop_cont_match').matchHeight();

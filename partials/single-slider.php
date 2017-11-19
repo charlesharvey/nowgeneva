@@ -2,7 +2,7 @@
 
 <ul class="bxslider">
 
-<?php $thumbs = array(); ?>
+<?php // $thumbs = array(); ?>
 	<?php while ( have_rows('slider') ) : the_row() ; ?>
 
 
@@ -12,13 +12,13 @@
 		<?php $link =  get_sub_field('link'); ?>
 		<?php $boutique =  get_sub_field('boutique'); ?>
 
-        <?php  array_push( $thumbs, $image['sizes']['small']); ?>
+        <?php  // array_push( $thumbs, $image['sizes']['small']); ?>
 
         <li  class="single_slide" >
             <article>
 
                 <div class="article_image_container">
-                <img class="zoom" src="<?php echo $image['sizes']['medium']; ?>"data-magnify-src="<?php echo $image['sizes']['large']; ?>"  alt="<?php echo $nom_produit; ?>">
+                <img class="zoom" src="<?php echo $image['sizes']['rectangle']; ?>" data-magnify-src="<?php echo $image['sizes']['large']; ?>"  alt="<?php echo $nom_produit; ?>">
                 </div>
 
                 <h4><?php echo $nom_produit; ?></h4>
