@@ -20,6 +20,16 @@
         margin: 0 0 10px;
     }
 
+    .article_image_container {
+        height: 200px;
+
+        img {
+            margin: 0 0 10px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
 
     .category {
         border: 0;

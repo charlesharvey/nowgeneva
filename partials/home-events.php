@@ -10,7 +10,7 @@ $posts_per_page = -1;
 if ( $is_front_page  ) {
     $posts_per_page = 3;
 };
-
+$today = date( 'Y-m-d' );
 $evenements = new WP_Query(array(
     'post_type' => 'event',
      'posts_per_page' =>  $posts_per_page,

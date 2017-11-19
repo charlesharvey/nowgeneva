@@ -16,7 +16,9 @@
 
         <li  class="single_slide" >
             <article>
-                <div class="article_image" style="background-image:url('<?php echo $image['sizes']['large']; ?>')">
+
+                <div class="article_image_container">
+                <img class="zoom" src="<?php echo $image['sizes']['medium']; ?>"data-magnify-src="<?php echo $image['sizes']['large']; ?>"  alt="<?php echo $nom_produit; ?>">
                 </div>
 
                 <h4><?php echo $nom_produit; ?></h4>

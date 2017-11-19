@@ -1,7 +1,10 @@
 import bxslider from '../node_modules/bxslider/dist/jquery.bxslider';
 import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHeight';
 import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
+import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
 
+
+console.log(magnify);
 
 (function ($, root, undefined) {
 
@@ -10,13 +13,11 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 		'use strict';
 
 		$(document).ready(function () {
-			if(window.location.href.indexOf("#newsletter") > -1)
-	    {
-	         $('#open_subscription').click();
-	    }
+			if(window.location.href.indexOf("#newsletter") > -1){
+	            $('#open_subscription').click();
+	        }
 		});
 
-        console.log('is this working?');
 
 			var $site_nav = $('#site_nav');
 			var $open_nav = $('#open_nav');
@@ -109,6 +110,9 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
             });
 
 
+            // jquery magnify zooming on IMAGES
+             var $zoom = $('.zoom').magnify();
+             console.log($zoom);
 
 
 
@@ -128,12 +132,13 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
         })
 
-				$('#rest_of_site').on('mouseover', function(){
+		$('#rest_of_site').on('mouseover', function(){
             $('.supermenu').removeClass('hovered');
         })
-				$('header').on('mouseover', function(){
-						$('.supermenu').removeClass('hovered');
-				})
+
+		$('header').on('mouseover', function(){
+			$('.supermenu').removeClass('hovered');
+		})
 
 
 
