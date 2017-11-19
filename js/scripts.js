@@ -76,9 +76,12 @@ import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
             var contWidth = $('.container').width();
             var slideWidth = ( contWidth / 3) - 15;
             var noSlides = 3;
-            if (slideWidth < 200) {
+            if (contWidth < 400) {
                  noSlides = 1;
                  slideWidth = contWidth;
+            } else if ( contWidth < 800) {
+                noSlides = 2;
+                slideWidth = (contWidth / 2) - 10;
             }
 
             $('.bxslider').bxSlider({
