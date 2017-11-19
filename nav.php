@@ -14,7 +14,7 @@ $categories = get_terms( array(
 
 $portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 ));
 $supermenu = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><blockquote>Aute doctrina nam laborum, ad amet singulis eiusmod.Aut cernantur graviterque ubi cernantur te dolor.</blockquote></div>';
+$supermenu .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
 foreach ( $portraits as $post ) : setup_postdata( $post );
   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
   $permalink = get_the_permalink();
@@ -49,7 +49,7 @@ $events = get_posts(array(
       )
  ));
 $supermenu = '<div id="supermenu_events" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><blockquote>Voluptate fidelissimae e officia e incurreret a minim mentitum. Labore eiusmod ita esse amet se sunt qui officia.</blockquote></div>';
+$supermenu .= '<div class="col-sm-3"><blockquote>Inscrivez vous vite pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</blockquote></div>';
 foreach ( $events as $post ) : setup_postdata( $post );
 $start_date = get_field('start_date');
 $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';

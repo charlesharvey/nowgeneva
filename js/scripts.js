@@ -9,7 +9,12 @@ import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 
 		'use strict';
 
-
+		$(document).ready(function () {
+			if(window.location.href.indexOf("#newsletter") > -1)
+	    {
+	         $('#open_subscription').click();
+	    }
+		});
 
         console.log('is this working?');
 

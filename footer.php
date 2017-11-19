@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p><strong>Annonceurs:</strong><br>Email: <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br><strong>Rédaction:</strong><br>Email: <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a><br>Tel:<a href="tel:+ 41 76 3696117">+ 41 76 3696117</a> </p>
+                                <p><strong>Annonceurs:</strong><br>Email: <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br><strong>Rédaction:</strong><br>Email: <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
                             </div>
                         </div>
 
