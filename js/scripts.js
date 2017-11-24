@@ -86,27 +86,37 @@ import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
 
 
             var $bxsliders = $('.bxslider');
+            var $slidesLength =  $('li', $bxsliders).length ;
 
 
-            $bxsliders.bxSlider({
-            //  pagerCustom: '#bx-pager',
-            //  adaptiveHeight: true,
-                minSlides: noSlides,
-                maxSlides: noSlides,
-                moveSlides: 1,
-                slideMargin: 30,
-                pager: false,
-                slideWidth: slideWidth
-            });
+            if (  $slidesLength > noSlides) {
 
-            var $bxwrapper = $('.bx-wrapper');
+                $bxsliders.bxSlider({
+                //  pagerCustom: '#bx-pager',
+                //  adaptiveHeight: true,
+                    minSlides: noSlides,
+                    maxSlides: noSlides,
+                    moveSlides: 1,
+                    slideMargin: 30,
+                    pager: false,
+                    slideWidth: slideWidth,
+                    onSliderLoad: function() {
+                        console.log('slider loaded');
+                    }
+                });
 
-
-            if ( $('li', $bxsliders).length <= noSlides) {
-                 $bxwrapper.addClass('hideSlider');
             }  else {
-                 $bxwrapper.removeClass('hideSlider');
+                $bxsliders.addClass('noslider  clearfix');
+
+
+
             }
+
+
+
+
+
+
 
 
             // end of slider
