@@ -22,6 +22,8 @@ $posts = new WP_Query(array(
             <?php if ($p == 0) : ?>
                 <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'large') : ''; ?>
                 <?php $image_caption = ( has_post_thumbnail()) ? get_post(get_post_thumbnail_id())->post_excerpt : ''; ?>
+                <?php $caption = ( has_post_thumbnail()) ? get_the_post_thumbnail_caption(get_the_ID()) : ''; ?>
+                <?php $captionclass =  (trim($caption) != '') ? '' : 'nocaption'; ?>
                 <?php $url = get_the_permalink(); ?>
                 <?php   $excerpt = explode(' ', strip_tags( get_the_excerpt()));
                        $excerpt = implode(' ',  array_slice($excerpt, 0, 35) ); ?>
@@ -44,6 +46,7 @@ $posts = new WP_Query(array(
                     </div>
 
                 </article>
+                <p class="wp-caption-text <?php echo $captionclass; ?>"><?php echo $caption; ?></p>
 
                 <div class="other_articles">
                     <div class="row">
@@ -74,9 +77,8 @@ $posts = new WP_Query(array(
 
                 </div> <!-- END OF ROW -->
 
-
-                <p class="more_articles"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="button">Plus d'articles</a></p>
             </div><!-- END OF OTHER ARTICLES -->
+              <p class="more_articles"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="button">Plus d'articles</a></p>
 
 
         </div>

@@ -10,12 +10,11 @@
              $permalink = get_permalink();
              $title = get_the_title();
              $excerpt = explode(' ', strip_tags( get_the_excerpt()));
-             $excerpt = implode(' ',  array_slice($excerpt, 0, 20) );
+             $excerpt = implode(' ',  array_slice($excerpt, 0, 35) );
 
              $str = '';
 
             if ($post_type == 'featured') {
-
                 if (sizeof($featured < 1 )) { // only show one featued post
 
                     $str .= '<a class="post_from_shop_image" href="' . $permalink .'">

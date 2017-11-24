@@ -43,6 +43,7 @@ $evenements = new WP_Query(array(
         <?php if ($is_front_page): ?>
         <h2 ><span>Events &amp; Vente</span></h2>
         <?php endif; ?>
+                <p style="margin: -20px auto -20px; text-align: center; font-style: italic; font-size: 1.8em;"><a href="#newsletter">Inscrivez vous vite</a> pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</p>
         <ul class="bxslider">
 
 
@@ -67,10 +68,17 @@ $evenements = new WP_Query(array(
 
                             <h4><a href="<?php echo $url; ?>">
                               <?php if ($boutiques) echo $boutiques[0]->post_title; ?>
-                              <?php if ($start_date) echo ' - ' . $start_date; ?>
-                              <?php if ($end_date && $start_date && $start_date != $end_date) echo ' - ' .  $end_date; ?>
+                              <?php// if ($start_date) echo ' - ' . $start_date; ?>
+                              <?php// if ($end_date && $start_date && $start_date != $end_date) echo ' - ' .  $end_date; ?>
                               <?php if ($place) echo ' - ' . $place; ?>
                             </a></h4>
+
+                            <?php if ($start_date){?>
+                              <p class="time">
+                                <?php echo $start_date; ?>
+                                <?php if ($end_date && $start_date && $start_date != $end_date) echo ' - ' .  $end_date; ?>
+                              </p>
+                            <?php } ?>
 
                             <p class="home_tl time_location">
                               <?php echo get_the_title(); ?>

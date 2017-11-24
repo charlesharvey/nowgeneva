@@ -20,6 +20,20 @@
                     <?php the_post_thumbnail();?>
                 </div>
                 <div class="col-sm-6 col-md-6">
+                  <?php if ($boutiques OR $place){ ?>
+                    <p class="event_place">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <?php if ($boutiques) echo $boutiques[0]->post_title; ?>
+                      <?php if ($boutiques AND $place) echo ' - '; ?>
+                      <?php if ($place) echo $place; ?>
+                    </p>
+                  <?php } ?>
+                   <?php if ($start_date){?>
+                        <p class="event_date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                        <?php echo $start_date; ?>
+                        <?php if ($end_date && $start_date && $start_date != $end_date) echo ' - ' .  $end_date; ?>
+                        </p>
+                    <?php } ?>
 
                     <?php the_content(); // Dynamic Content ?>
 
