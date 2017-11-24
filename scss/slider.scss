@@ -1,7 +1,16 @@
 .bx-wrapper {
     position: relative;
     padding: 0 40px 30px;
+
+    &.hideSlider {
+        padding: 0 0 30px;
+
+        .bx-controls  {
+            display: none;
+        }
+    }
 }
+
 
 .bxslider {
     position: relative;
