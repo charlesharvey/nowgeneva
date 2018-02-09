@@ -32,6 +32,11 @@
 
     position: relative;
 
+    &.past_event {
+        opacity: 0.65;
+        filter: grayscale(1);
+    }
+
 
     .article_image {
         height: 200px;
