@@ -77,23 +77,47 @@ import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
             var slideWidth = ( contWidth / 3) - 15;
             var noSlides = 3;
             if (contWidth < 400) {
-                 noSlides = 1;
-                 slideWidth = contWidth;
+                noSlides = 1;
+                slideWidth = contWidth;
             } else if ( contWidth < 800) {
                 noSlides = 2;
                 slideWidth = (contWidth / 2) - 10;
             }
 
-            $('.bxslider').bxSlider({
-            //   pagerCustom: '#bx-pager',
-                minSlides: noSlides,
-                maxSlides: noSlides,
-                moveSlides: 1,
-                slideMargin: 30,
-                //     adaptiveHeight: true,
-                pager: false,
-                slideWidth: slideWidth
-            });
+
+            var $bxsliders = $('.bxslider');
+            var $slidesLength =  $('li', $bxsliders).length ;
+
+
+            if (  $slidesLength > noSlides) {
+
+                $bxsliders.bxSlider({
+                //  pagerCustom: '#bx-pager',
+                //  adaptiveHeight: true,
+                    minSlides: noSlides,
+                    maxSlides: noSlides,
+                    moveSlides: 1,
+                    slideMargin: 30,
+                    pager: false,
+                    slideWidth: slideWidth,
+                    onSliderLoad: function() {
+                        console.log('slider loaded');
+                    }
+                });
+
+            }  else {
+                $bxsliders.addClass('noslider  clearfix');
+
+
+
+            }
+
+
+
+
+
+
+
 
             // end of slider
 
