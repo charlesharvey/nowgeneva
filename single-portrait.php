@@ -12,13 +12,8 @@
             <h1><span><?php the_title(); ?></span></h1>
                 <br>
                 <br>
-            <div class="row">
-                <div class="col-sm-6 col-md-6">
-                    <?php the_post_thumbnail();?>
-                </div>
-                <div class="col-sm-6 col-md-6">
+                    <div style="margin-bottom:50px"><?php the_post_thumbnail();?></div>
                     <?php the_content(); // Dynamic Content ?>
-                </div>
             </div>
 
 
