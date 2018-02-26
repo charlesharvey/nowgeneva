@@ -125,7 +125,7 @@ img{
             }
 
             p {
-                font-size: 1.4em;
+                font-size: 1.8em;
 
             }
 
@@ -161,11 +161,12 @@ img{
 p.category {
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin: 0;
     padding: 0 3px 10px;
     word-break: break-word;
     text-align: left;
+    font-family: $header_font_stack;
 
     a {
         color: inherit;
@@ -194,10 +195,10 @@ p.category {
 
         }
         p {
-            font-size: 1.4em;
+            font-size: 1.8em;
 
             &.category {
-
+              font-size: 1.4em;
                 a {
                     color: inherit;
                 }

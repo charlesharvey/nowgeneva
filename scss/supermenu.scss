@@ -3,6 +3,7 @@
     position: relative;
     display: none;
     color: white;
+    font-size: 1.2em;
 
 
     a {
@@ -32,9 +33,9 @@
         }
 
         h3 {
-            font-size: 1.9em;
+            font-size: 1.4em;
             //font-family: $font_stack;
-            padding: 10px 0 5px ;
+            padding: 10px 0 0px ;
         }
 
 
@@ -53,16 +54,22 @@
     }
 
     blockquote {
-        font-size: 1.8em;
+        font-size: 1.4em;
         font-style: italic;
         margin:5px 0 0;
         padding: 0;
         color: white;
         border:0;
         text-align: left;
-        font-family: $font_stack;
+        font-family: $header_font_stack;
     }
-
+    a.super_button {
+    font-size: 1.6em;
+    border: solid 1px white!important;
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
         ul {
             display: block;
             text-align: left;
@@ -73,7 +80,7 @@
                 padding: 10px 0;
 
                 a {
-                    padding: 0 15px;
+                    padding: 0 15px 0 10px;
                     &:hover {
                         background-color: transparent;
                     }

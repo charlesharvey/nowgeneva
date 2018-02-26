@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br><br/><strong>Rédaction:</strong><br /> <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
+                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br/><strong>Rédaction:</strong><br /> <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@
 
                     </div>
                     <div class="copyright">
-                        <p class="container"> &copy; <?php echo date('Y'); ?> Now Geneva | Website by <a href="https://webfactor.ch" target="_blank">WebFactor</a></p>
+                        <p class="container"> &copy; <?php echo date('Y'); ?> Now Geneva  |<a href="<?php echo get_site_url();?>/sitemap.xml" target="_blank">  SiteMap  </a>|  Website by <a href="https://webfactor.ch" target="_blank">WebFactor</a></p>
                     </div>
 
                 </footer>

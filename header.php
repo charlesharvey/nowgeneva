@@ -19,6 +19,8 @@
 
 
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,600" rel="stylesheet">
+
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -36,7 +38,12 @@
             <header class="header ">
                 <div class="container">
                     <div id="top_nav">
-                        <a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+											<?php if(is_front_page()){ ?>
+												<h1><a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+											<?php } else { ?>
+												<a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+											<?php } ?>
+
                         <div id="social_and_search">
                             <ul class="social_nav">
                                 <li><a class="icon_search" href="#">Chercher</a></li>

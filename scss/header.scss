@@ -21,7 +21,13 @@ header {
 
     }
 
-
+    h1 {
+      padding: 0!important;
+      margin: 0!important;
+      &:before, &:after {
+        display: none;
+      }
+    }
 
 
     a.logo {
@@ -175,6 +181,7 @@ ul.social_nav {
             border: 2px solid  $brand_color;
             text-transform: uppercase;
             color: $font_color;
+            font-size: 0.7em;
 
             &:hover {
                 background-color: lighten($brand_color, 20);
@@ -365,6 +372,7 @@ ul.social_nav {
     }
 
     nav#site_nav {
+      font-size: 1.1em;
         ul {
             display: flex;
             text-align: center;

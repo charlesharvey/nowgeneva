@@ -93,4 +93,12 @@ a.social_media.instagram:hover {background: #833ab4;}
 a.social_media.pinterest:hover {background: #bd081c;}
 a.social_media.twitter:hover {background: #1ea1f2;}
 
-.logo_boutique {border: solid 1px #ddd; margin-bottom: 15px;}
+.logo_boutique {
+  border: solid 1px #ddd;
+  margin-bottom: 15px;
+  filter: grayscale(1);
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    filter: grayscale(0);
+  }
+}

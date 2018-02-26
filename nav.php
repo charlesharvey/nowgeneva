@@ -49,7 +49,7 @@ $events = get_posts(array(
       )
  ));
 $supermenu = '<div id="supermenu_events" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><blockquote>Inscrivez vous vite pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</blockquote></div>';
+$supermenu .= '<div class="col-sm-3"><blockquote>Inscrivez vous vite pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</blockquote> <a href="#newsletter" class="super_button">Abonnez-vous</a></div>';
 foreach ( $events as $post ) : setup_postdata( $post );
 $start_date = get_field('start_date');
 $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';

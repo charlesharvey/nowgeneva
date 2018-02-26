@@ -75,7 +75,7 @@ if (  $ev_count  < 3) {
         <?php if ($is_front_page): ?>
             <h2 ><span>Events &amp; Vente</span></h2>
         <?php endif; ?>
-        <p style="margin: -20px auto -20px; text-align: center; font-style: italic; font-size: 1.8em;"><a href="#newsletter">Inscrivez vous vite</a> pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</p>
+        <p style="margin: -20px auto -20px; text-align: center; font-style: italic; font-size: 2.1em;"><a href="#newsletter">Inscrivez vous vite</a> pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</p>
         <ul class="bxslider">
 
 
