@@ -19,7 +19,7 @@ $supermenu_b .= '<div class="col-sm-3"><ul>';
    foreach ($boutique_cats as $boutique_cat) {
        $supermenu_b .= '<li><a href="'.  $home_url . '/boutiques/?cat='. $boutique_cat->slug .'">'. $boutique_cat->name   . '</a></li>';
    };
-$supermenu_b .= ' </ul></div>';
+$supermenu_b .= ' </ul><a href="'.  $home_url . '/devenir-une-boutique-membre/" class="super_button">Devenir une boutique membre </a><br /><br /></div>';
 foreach ( $boutiques as $post ) : setup_postdata( $post );
   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
   $permalink = get_the_permalink();
