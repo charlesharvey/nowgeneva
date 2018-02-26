@@ -11,17 +11,34 @@ $categories = get_terms( array(
 )  );
 
 
+$boutiques = get_field('menu_shops', 'option');
+$boutique_cats = get_terms(   array('hide_empty' => false,'taxonomy' => 'boutique_cat')  );
+
+$supermenu_b = '<div id="supermenu_boutiques" class="supermenu"><div class="container"><div class="row">';
+$supermenu_b .= '<div class="col-sm-3"><ul>';
+   foreach ($boutique_cats as $boutique_cat) {
+       $supermenu_b .= '<li><a href="'.  $home_url . '/boutiques/?cat='. $boutique_cat->slug .'">'. $boutique_cat->name   . '</a></li>';
+   };
+$supermenu_b .= ' </ul></div>';
+foreach ( $boutiques as $post ) : setup_postdata( $post );
+  $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+  $permalink = get_the_permalink();
+  $supermenu_b .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date"></p></div>';
+endforeach; wp_reset_postdata();
+$supermenu_b .= '</div></div></div>';
+array_push($chilly_supermenus, $supermenu_b);
+
 
 $portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 ));
-$supermenu = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
+$supermenu_p = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
+$supermenu_p .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
 foreach ( $portraits as $post ) : setup_postdata( $post );
   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
   $permalink = get_the_permalink();
-  $supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
+  $supermenu_p .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
 endforeach; wp_reset_postdata();
-$supermenu .= '</div></div></div>';
-array_push($chilly_supermenus, $supermenu);
+$supermenu_p .= '</div></div></div>';
+array_push($chilly_supermenus, $supermenu_p);
 
 
 $today = date("Y-m-d");
@@ -48,8 +65,8 @@ $events = get_posts(array(
 
       )
  ));
-$supermenu = '<div id="supermenu_events" class="supermenu"><div class="container"><div class="row">';
-$supermenu .= '<div class="col-sm-3"><blockquote>Inscrivez vous vite pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</blockquote> <a href="#newsletter" class="super_button">Abonnez-vous</a></div>';
+$supermenu_ev = '<div id="supermenu_events" class="supermenu"><div class="container"><div class="row">';
+$supermenu_ev .= '<div class="col-sm-3"><blockquote>Inscrivez vous vite pour recevoir en avant première les ventes privées, soldes ou offres privilégiées accordées aux abonnés(es) de Now Geneva.</blockquote> <a href="#newsletter" class="super_button">Abonnez-vous</a></div>';
 foreach ( $events as $post ) : setup_postdata( $post );
 $start_date = get_field('start_date');
 $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
@@ -61,10 +78,10 @@ $title = ($boutiques) ?  $boutiques[0]->post_title : 'Boutique';
 $title .= ($place)   ? ' - ' . $place: '';
 
 
-$supermenu .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.get_the_permalink().'">'. $title  .'</a></h3><p class="the_date">Le '. $start_date .'</p></div>';
+$supermenu_ev .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.get_the_permalink().'">'. $title  .'</a></h3><p class="the_date">Le '. $start_date .'</p></div>';
 endforeach; wp_reset_postdata();
-$supermenu .= '</div></div></div>';
-array_push($chilly_supermenus, $supermenu);
+$supermenu_ev .= '</div></div></div>';
+array_push($chilly_supermenus, $supermenu_ev);
 
 
  ?>
@@ -107,11 +124,13 @@ array_push($chilly_supermenus, $supermenu);
             <?php array_push($chilly_supermenus, $supermenu); ?>
             <?php endforeach; ?>
 
-             <?php chilly_nav('primary-navigation'); ?>
 
+
+            <li  class="supermenu_li" data-supermenu="supermenu_boutiques"><a href="<?php echo  $home_url; ?>/boutiques/">Boutiques</a></li>
             <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="<?php echo  $home_url; ?>/portrait/">Portraits</a></li>
             <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="<?php echo  $home_url; ?>/events-ventes/">EVENTS &amp; VENTES</a></li>
 
+             <?php // chilly_nav('primary-navigation'); ?>
 
         </ul>
 
