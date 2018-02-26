@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php $meta_desc ="Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique."; get_header(); ?>
 
 <div class="container">
 
