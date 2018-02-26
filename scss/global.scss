@@ -319,6 +319,30 @@ p.wp-caption-text {
 
 
 
+form.wpcf7-form {
+  display: block !important;
+  max-width: 670px;
+  text-align: center;
+  margin: 30px auto;
+  input,textarea {
+      background: none;
+      border: solid 1px #555;
+      border-radius: 0;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  input.wpcf7-form-control.wpcf7-submit {
+      background: #3c3c3c;
+      color: white;
+      &:hover {
+        background: #222
+      }
+  }
+}
+
+
+
 
 @media(max-width:767px) {
   #rest_of_site {padding-top: 20px;}
