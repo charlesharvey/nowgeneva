@@ -10,8 +10,8 @@
                                 <h4>Suivez-nous</h4>
                                 <ul class="social_nav">
                                     <li ><a target="blank"  class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
+                                    <li><a target="blank"  class="icon_instagram" href="https://www.instagram.com/now_geneva/">Instagram</a></li>
                                     <li><a target="blank"  class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
-                                    <li><a target="blank"  class="icon_instagram" href="https://www.instagram.com/nowgeneva/">Instagram</a></li>
                                 </ul>
 
                             </div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br/><strong>Rédaction:</strong><br /> <a href="contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
+                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br/><strong>Rédaction:</strong><br /> <a href="mailto:contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
                             </div>
                         </div>
 

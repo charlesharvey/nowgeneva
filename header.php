@@ -48,8 +48,9 @@
                             <ul class="social_nav">
                                 <li><a class="icon_search" href="#">Chercher</a></li>
                                 <li ><a target="_blank" class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
+                                <li><a target="_blank" class="icon_instagram" href="https://www.instagram.com/now_geneva/">Instagram</a></li>
                                 <li><a target="_blank" class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
-                                <li><a target="_blank" class="icon_instagram" href="https://www.instagram.com/nowgeneva/">Instagram</a></li>
+
                                 <li><a id="open_subscription" class="subscription"  href="#">Abonnez-vous</a></li>
                             </ul>
                             <!-- <form action="#"><input name="s" type="text" placeholder="search this site..."></form> -->
