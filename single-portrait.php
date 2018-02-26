@@ -14,6 +14,22 @@
                 <br>
                     <div style="margin-bottom:50px"><?php the_post_thumbnail();?></div>
                     <?php the_content(); // Dynamic Content ?>
+
+                <div class="gallery_container">
+
+                    <?php $galerie = get_field('galerie'); ?>
+
+                    <?php if ($galerie) : ?>
+                    <ul class="bxslider">
+                        <?php foreach ($galerie as $image) : ?>
+                            <li><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['title']; ?>" /></li>
+                        <?php endforeach; ?>
+                    </ul>
+
+                    <?php endif; ?>
+                </div>
+
+
             </div>
 
 

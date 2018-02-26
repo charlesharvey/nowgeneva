@@ -107,15 +107,18 @@ import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
 
             }  else {
                 $bxsliders.addClass('noslider  clearfix');
-
-
-
             }
 
 
 
-
-
+            var $galerieslider = $('.galerieslider');
+            $galerieslider.bxSlider({
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 30,
+                pager: true
+            });
 
 
 
