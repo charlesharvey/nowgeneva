@@ -16,7 +16,7 @@ $evenements = new WP_Query(array(
     'posts_per_page' =>  $posts_per_page,
     'meta_key' => 'start_date',
     'orderby' => 'meta_value',
-    'order' => 'ASC',
+    'order' => 'DESC',
     'meta_query' => array(
         'relation' => 'OR',
         array(
@@ -46,7 +46,7 @@ if (  $ev_count  < 3) {
         'posts_per_page' =>  $limit,
         'meta_key' => 'start_date',
         'orderby' => 'meta_value',
-        'order' => 'ASC',
+        'order' => 'DESC',
         'meta_query' => array(
             'relation' => 'AND',
             array(
