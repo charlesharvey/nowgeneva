@@ -25,6 +25,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php global $meta_desc; ?>
 		<meta name="description" content="<?php if ($meta_desc){ echo $meta_desc;}else { bloginfo('description');} ?>">
+		
 		<script src="https://use.fontawesome.com/188c7a83eb.js"></script>
 
 		<?php wp_head(); ?>
@@ -63,8 +64,6 @@
              <?php get_template_part('searchform'); ?>
              <?php get_template_part('nav'); ?>
              <?php get_template_part('signupform'); ?>
-					 </a>
-					 </div>
-					 </div>
+
 
 <div id="rest_of_site">

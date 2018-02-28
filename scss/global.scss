@@ -9,6 +9,7 @@
 @import "footer";
 @import "slider";
 @import "boutiques";
+@import "streetlook";
 @import "magnify";
 // @import "../../node_modules/bxslider/dist/jquery.bxslider";
 
@@ -355,4 +356,25 @@ form.wpcf7-form {
   .home_tl.time_location {font-size:1.2em!important;}
   .more_articles {margin:10px 0 10px!important; text-align: center;}
   a.button {font-size: 0.8em; padding: 8px 20px;}
+}
+
+#instafeed {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      background-size: cover;
+        height: 200px;
+        flex:1 0 auto;
+        display:inline-block;
+        max-width: #{100% / 3};
+        border:0;
+
+        &:hover {
+            border:0;
+        }
+
+
+    }
 }

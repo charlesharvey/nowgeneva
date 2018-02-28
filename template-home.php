@@ -4,7 +4,8 @@
 
 <?php get_template_part('partials/home', 'publicite'); ?>
 <?php get_template_part('partials/home', 'posts'); ?>
-<?php get_template_part('partials/home', 'featuredshop'); ?> 
+<?php get_template_part('partials/home', 'featuredshop'); ?>
 <?php get_template_part('partials/home', 'events'); ?>
+  <div id="instafeed"></div>
 
 <?php get_footer(); ?>

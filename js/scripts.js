@@ -2,6 +2,7 @@ import bxslider from '../node_modules/bxslider/dist/jquery.bxslider';
 import matchHeight from '../node_modules/jquery-match-height/dist/jquery.matchHeight';
 import lazyload from '../node_modules/jquery-lazyload/jquery.lazyload.js';
 import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
+import Instafeed from '../node_modules/instafeed.js/instafeed.js';
 
 
 (function ($, root, undefined) {
@@ -167,6 +168,21 @@ import magnify from '../node_modules/magnify/dist/js/jquery.magnify.js';
 		})
 
 
+		// instagram
+		if ( $('#instafeed').length  ) {
+				var feed = new Instafeed({
+						get: 'user',
+						userId: now_geneva,
+						accessToken: '233911443.1677ed0.f5b4378409a048b4ae8e83bc0da8580e',
+						sortBy: 'most-recent',
+						limit: 6,
+						resolution: 'standard_resolution',
+						template: '<a target="_blank" href="{{link}}" style="background-image:url({{image}})"></a>',
+						success: function(data) {
+						}
+				});
+				feed.run();
+		}
 
 
 

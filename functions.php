@@ -89,7 +89,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.1.2';
+  return '0.1.3';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -629,5 +629,27 @@ $args = array(
 
 );
 acf_add_options_page( $args );
+
+
+
+function my_acf_admin_head() {
+	?>
+	<script type="text/javascript">
+	(function($){
+
+		$(document).ready(function(){
+
+            $( ".-collapse" ).each(function( index ) {
+              $( this ).click();
+            });
+
+        });
+
+	})(jQuery);
+	</script>
+	<?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
 
 ?>
