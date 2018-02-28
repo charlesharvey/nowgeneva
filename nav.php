@@ -29,16 +29,16 @@ $supermenu_b .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu_b);
 
 
-$portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 ));
-$supermenu_p = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
-$supermenu_p .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
-foreach ( $portraits as $post ) : setup_postdata( $post );
-  $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
-  $permalink = get_the_permalink();
-  $supermenu_p .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
-endforeach; wp_reset_postdata();
-$supermenu_p .= '</div></div></div>';
-array_push($chilly_supermenus, $supermenu_p);
+// $portraits = get_posts(array('post_type' => 'portrait', 'posts_per_page' =>  3 ));
+// $supermenu_p = '<div id="supermenu_portraits" class="supermenu"><div class="container"><div class="row">';
+// $supermenu_p .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
+// foreach ( $portraits as $post ) : setup_postdata( $post );
+//   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
+//   $permalink = get_the_permalink();
+//   $supermenu_p .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date">'. get_the_date() .'</p></div>';
+// endforeach; wp_reset_postdata();
+// $supermenu_p .= '</div></div></div>';
+// array_push($chilly_supermenus, $supermenu_p);
 
 
 $today = date("Y-m-d");
@@ -97,16 +97,24 @@ array_push($chilly_supermenus, $supermenu_ev);
             foreach ($categories as $category) :
 
                  $parent_id = $category->term_id;
-                 $child_cats = get_terms( array('hide_empty' => false,'taxonomy' => 'category','parent' => $parent_id)  );
+
                  $latest = get_posts(array('post_type' => 'post', 'posts_per_page' =>  3, 'category'=> $parent_id ));
                  $slug = 'supermenu_' . $category->slug;
                  $supermenu = '<div id="' .  $slug .'" class="supermenu">';
                  $supermenu .= '<div class="container"><div class="row">';
-                 $supermenu .= '<div class="col-sm-3"><ul>';
-                    foreach ($child_cats as $child_cat) {
-                        $supermenu .= '<li><a href="'.  $home_url . '/category/'. $child_cat->slug .'">'. $child_cat->name   . '</a></li>';
-                    };
-                 $supermenu .= ' </ul></div>';
+
+                 if ($category->slug == 'portrait') {
+                     $supermenu .= '<div class="col-sm-3"><blockquote>Chaque mois la rédaction met en lumière des personnalités qui font l’actualité dans la mode, la culture, le monde des affaires ou encore la politique.</blockquote></div>';
+                 } else {
+                     $child_cats = get_terms( array('hide_empty' => false,'taxonomy' => 'category','parent' => $parent_id)  );
+                     $supermenu .= '<div class="col-sm-3"><ul>';
+                        foreach ($child_cats as $child_cat) {
+                            $supermenu .= '<li><a href="'.  $home_url . '/category/'. $child_cat->slug .'">'. $child_cat->name   . '</a></li>';
+                        };
+                     $supermenu .= ' </ul></div>';
+                 }
+
+
                  foreach ( $latest as $post ) : setup_postdata( $post );
                    $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
                    $permalink = get_the_permalink();
@@ -127,7 +135,7 @@ array_push($chilly_supermenus, $supermenu_ev);
 
 
             <li  class="supermenu_li" data-supermenu="supermenu_boutiques"><a href="<?php echo  $home_url; ?>/boutiques/">Boutiques</a></li>
-            <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="<?php echo  $home_url; ?>/portrait/">Portraits</a></li>
+            <!-- <li  class="supermenu_li" data-supermenu="supermenu_portraits"><a href="<?php echo  $home_url; ?>/portrait/">Portraits</a></li> -->
             <li  class="supermenu_li" data-supermenu="supermenu_events"><a href="<?php echo  $home_url; ?>/events-ventes/">EVENTS &amp; VENTES</a></li>
 
              <?php // chilly_nav('primary-navigation'); ?>
