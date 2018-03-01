@@ -168,11 +168,12 @@ import Instafeed from '../node_modules/instafeed.js/instafeed.js';
 		})
 
 
+
 		// instagram
 		if ( $('#instafeed').length  ) {
 				var feed = new Instafeed({
 						get: 'user',
-						userId: now_geneva,
+						userId: 233911443,
 						accessToken: '233911443.1677ed0.f5b4378409a048b4ae8e83bc0da8580e',
 						sortBy: 'most-recent',
 						limit: 6,

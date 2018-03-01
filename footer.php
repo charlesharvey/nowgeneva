@@ -11,7 +11,7 @@
                                 <ul class="social_nav">
                                     <li ><a target="blank"  class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
                                     <li><a target="blank"  class="icon_instagram" href="https://www.instagram.com/now_geneva/">Instagram</a></li>
-                                    <li><a target="blank"  class="icon_pinterest" href="https://www.pinterest.ch/NowGeneva/">Pinterest</a></li>
+                                    <li><a target="blank"  class="icon_pinterest" href="https://www.pinterest.ch/Now_Geneva/boards/">Pinterest</a></li>
                                 </ul>
 
                             </div>
