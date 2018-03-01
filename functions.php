@@ -652,4 +652,68 @@ function my_acf_admin_head() {
 
 add_action('acf/input/admin_head', 'my_acf_admin_head');
 
+
+
+
+
+
+function social_meta_properties(){
+
+    $smp =  new stdClass();
+    global $post;
+
+    if (is_single()) {
+
+        $post_id = get_the_ID();
+        $excerpt  =  get_the_excerpt();
+        if ($excerpt == '') $excerpt =  wp_trim_words($post->post_content,20);
+        $smp->title = get_the_title();
+        $smp->description = $excerpt;
+        $smp->image =  thumbnail_of_post_url( $post_id, 'medium' );
+        $smp->url = get_the_permalink();
+
+    } else {
+        $smp->title = 'Now Geneva';
+        $smp->description = get_bloginfo('description');
+        $smp->image =   get_template_directory_uri() . '/img/nowgeneva.jpg';
+        $smp->url = get_home_url();
+    }
+
+
+    return $smp;
+
+
+}
+
+
+function show_social_meta_properties() {
+    $smp = social_meta_properties();
+    $smp_strings = array();
+    // THESE ONES ARE DONE BY SEO PLUGIN
+    // array_push($smp_strings, '<!-- Open Graph -->');
+    // array_push($smp_strings, '<meta property="og:url" content="' . $smp->url . '">');
+    // array_push($smp_strings, '<meta property="og:type" content="article" />');
+    // array_push($smp_strings, '<meta property="og:site_name" content="Go Out! Magazine"/>');
+    // array_push($smp_strings, '<meta property="og:title" content="' . $smp->title . '">');
+    // array_push($smp_strings, '<meta property="og:description" content="' . $smp->description . '">');
+     array_push($smp_strings, '<meta property="og:img" content="' . $smp->image . '">');
+    // array_push($smp_strings, '<meta property="og:image" content="' . $smp->image . '">');
+    // array_push($smp_strings, '<meta property="fb:admins" content="286502748099458" />');
+    // array_push($smp_strings, '<!-- TWITTER -->');
+    // array_push($smp_strings, '<meta name="twitter:card" value="' . $smp->description . '">');
+    // array_push($smp_strings, '<meta name="twitter:title" content="' . $smp->title . '">');
+    // array_push($smp_strings, '<meta name="twitter:description" content="' . $smp->description . '">');
+    // array_push($smp_strings, '<meta name="twitter:image" content="' . $smp->image . '">');
+    array_push($smp_strings, '<!-- GOOGLE -->');
+    array_push($smp_strings, '<meta itemprop="name" content="' . $smp->title . '">');
+    array_push($smp_strings, '<meta itemprop="description" content="' . $smp->description . '">');
+    array_push($smp_strings, '<meta itemprop="image" content="' . $smp->image . '">');
+
+
+    echo implode("\n\t",$smp_strings);
+
+
+}
+
+
 ?>

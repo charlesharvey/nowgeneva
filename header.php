@@ -27,7 +27,7 @@
 		<meta name="description" content="<?php if ($meta_desc){ echo $meta_desc;}else { bloginfo('description');} ?>">
 
 		<script src="https://use.fontawesome.com/188c7a83eb.js"></script>
-
+        <?php  show_social_meta_properties(); ?>
 		<?php wp_head(); ?>
 
 
@@ -40,11 +40,9 @@
             <header class="header ">
                 <div class="container">
                     <div id="top_nav">
-											<?php if(is_front_page()){ ?>
-												<h1><a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-											<?php } else { ?>
-												<a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-											<?php } ?>
+							<?php if(is_front_page()): ?><h1> <?php endif; ?>
+								<a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+							<?php if(is_front_page()): ?></h1> <?php endif; ?>
 
                         <div id="social_and_search">
                             <ul class="social_nav">
