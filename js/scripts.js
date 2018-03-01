@@ -236,7 +236,7 @@ import Instafeed from '../node_modules/instafeed.js/instafeed.js';
 
 
             var google_icon =  {
-                url: 'https://webfactor.ch/projets/nowgeneva/wp-content/themes/nowgeneva/img/location.png',
+                url: 'https://nowgeneva.com/wp-content/themes/nowgeneva/img/location.png',
                 scaledSize: new google.maps.Size(23, 31), // scaled size
                 origin: new google.maps.Point(0,0), // origin
                 anchor: new google.maps.Point(12,31) // anchor
