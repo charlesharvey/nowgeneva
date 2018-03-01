@@ -20,11 +20,13 @@ $supermenu_b .= '<div class="col-sm-3"><ul>';
        $supermenu_b .= '<li><a href="'.  $home_url . '/boutiques/?cat='. $boutique_cat->slug .'">'. $boutique_cat->name   . '</a></li>';
    };
 $supermenu_b .= ' </ul><a href="'.  $home_url . '/devenir-une-boutique-membre/" class="super_button">Devenir une boutique membre </a><br /><br /></div>';
+if ($boutiques):
 foreach ( $boutiques as $post ) : setup_postdata( $post );
   $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'small') : '';
   $permalink = get_the_permalink();
   $supermenu_b .= '<div class="col-sm-3"><a  class="article_image" href="'. $permalink .'" style="background-image:url(' . $image . ');" title=""></a><h3><a href="'.$permalink.'">'. get_the_title()  .'</a></h3><p class="the_date"></p></div>';
-endforeach; wp_reset_postdata();
+endforeach; endif; wp_reset_postdata();
+
 $supermenu_b .= '</div></div></div>';
 array_push($chilly_supermenus, $supermenu_b);
 
