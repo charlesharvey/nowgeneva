@@ -1,5 +1,6 @@
-<?php $posts_from_shop = get_posts_from_shop_id(  get_the_ID()  );  ?>
+<?php $posts_from_shop = get_posts_from_shop_id(  get_the_ID()  ); ?>
 <?php $featured = array(); $normal = array(); ?>
+<?php if ($posts_from_shop): ?>
 <?php if ($posts_from_shop->have_posts()): ?>
 
         <?php
@@ -52,6 +53,7 @@
 
 <?php endif; wp_reset_query(); ?>
 
+
     <h2> <span>Plus sur <?php echo get_the_title(); ?> </span></h2>
 <div class="row" >
     <div class="col-sm-6">
@@ -69,3 +71,5 @@
         </div>
     </div>
 </div>
+
+<?php endif; ?>

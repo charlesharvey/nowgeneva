@@ -542,9 +542,16 @@ function get_posts_from_shop_id($shop_id) {
         AND meta_value LIKE ' . $shop , OBJECT );
 
     $post_ids = array_map( 'get_post_id_from_wpdb',  $results );
-    $shop_posts = new WP_Query( array( 'post_type' => 'post', 'post__in' => $post_ids, 'posts_per_page' => -1 ) );
-    wp_reset_query();
-    return $shop_posts;
+    if(sizeof($post_ids) == 0) {
+      return false;
+    } else {
+      $shop_posts = new WP_Query( array( 'post_type' => 'post', 'post__in' => $post_ids, 'posts_per_page' => -1 ) );
+
+      wp_reset_query();
+      return $shop_posts;
+    }
+
+
 
 
 
@@ -714,6 +721,28 @@ function show_social_meta_properties() {
 
 
 }
+
+
+
+add_action( 'admin_menu', 'remove_menus' );
+function remove_menus(){
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        if ($user->user_login !== 'charles' && $user->user_login !== 'liily' && $user->user_login !== 'webfactor'  ) {
+            remove_menu_page( 'index.php' );                  //Dashboard
+            // remove_menu_page( 'edit.php' );                   //Posts
+            //remove_menu_page( 'upload.php' );                 //Media
+            remove_menu_page( 'edit-comments.php' );          //Comments
+            // remove_menu_page( 'themes.php' );                 //Appearance
+            // add_menu_page('Menu', 'Menu', 'manage_sites', 'nav-menus.php' );                 //Appearance
+            remove_menu_page( 'plugins.php' );                //Plugins
+            remove_menu_page( 'users.php' );               //Users
+            //remove_menu_page( 'tools.php' );                  //Tools
+            //remove_menu_page( 'options-general.php' );        //Settings
+            remove_menu_page( 'profile.php' );        //Settings
+        };
+    };
+};  // end of remove_menus;
 
 
 ?>

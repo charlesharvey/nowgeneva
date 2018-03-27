@@ -1,4 +1,4 @@
-    <?php $video = get_field('video_url', 'option'); ?>
+    <?php $video = get_field('video', 'option'); ?>
     <?php $title = get_field('video_title', 'option'); ?>
     <?php $subtitle = get_field('video_subtitle', 'option'); ?>
     <?php $show_vid = get_field('show_vid', 'option'); ?>
