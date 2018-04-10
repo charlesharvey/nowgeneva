@@ -69,7 +69,7 @@ if (  $ev_count  < 3) {
 ?>
 
 
-<?php  if ($evenements->have_posts() ) :  ?>
+<?php  if ($evenements->have_posts()  || $past_evenements->have_posts() ) :  ?>
     <div class="container">
 
         <?php if ($is_front_page): ?>
