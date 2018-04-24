@@ -48,7 +48,7 @@
                                 <li><a class="icon_search" href="#">Chercher</a></li>
                                 <li ><a target="_blank" class="icon_facebook" href="https://www.facebook.com/NowGeneva/">Facebook</a></li>
                                 <li><a target="_blank" class="icon_instagram" href="https://www.instagram.com/now_geneva/">Instagram</a></li>
-                                <li><a target="_blank" class="icon_pinterest" href="https://www.pinterest.ch/Now_Geneva/boards/">Pinterest</a></li>
+                                <!-- <li><a target="_blank" class="icon_pinterest" href="https://www.pinterest.ch/Now_Geneva/boards/">Pinterest</a></li> -->
 
                                 <li><a id="open_subscription" class="subscription"  href="#">Abonnez-vous</a></li>
                             </ul>

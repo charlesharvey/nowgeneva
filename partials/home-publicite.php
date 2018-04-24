@@ -1,3 +1,6 @@
+<?php if (get_field('image_pub', 'option')){ ?>
+
+
     <?php $image = get_field('image_pub', 'option')['url']; ?>
       <?php $caption = get_field('image_pub', 'option')['caption']; ?>
       <?php $captionclass =  (trim($caption) != '') ? '' : 'nocaption'; ?>
@@ -16,5 +19,5 @@
           </div>
       </div>
     </a>
-
 </div>
+<?php } ?>

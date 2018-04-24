@@ -1,9 +1,11 @@
-  <?php $image = get_field('image_alaune', 'option')['url']; ?>
+  <?php if(get_field('image_alaune', 'option')){ ?>
+
+
+<?php $image = get_field('image_alaune', 'option')['url']; ?>
     <?php $caption = get_field('image_alaune', 'option')['caption']; ?>
     <?php $captionclass =  (trim($caption) != '') ? '' : 'nocaption'; ?>
     <?php $boutique_link = get_field('boutique_alaune', 'option'); ?>
     <?php $boutique_title = get_field('texte_alaune', 'option'); ?>
-
 
 <div class="container">
     <div class="advert">
@@ -20,3 +22,5 @@
 
 
 </div>
+
+<?php } ?>
