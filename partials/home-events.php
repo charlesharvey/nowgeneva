@@ -94,7 +94,8 @@ if (  $ev_count  < 3) {
                     </div>
                     <h4><a href="<?php echo $url; ?>">
                         <?php if ($boutiques) echo $boutiques[0]->post_title; ?>
-                        <?php if ($place) echo ' - ' . $place; ?>
+                        <?php if ($place && $boutiques) echo ' - '; ?>
+                         <?php if ($place) echo $place; ?>
                     </a></h4>
                     <?php if ($start_date){?>
                         <p class="time">
@@ -110,7 +111,8 @@ if (  $ev_count  < 3) {
                 </li>
             <?php  endwhile; ?>
 
-            <?php   while($past_evenements->have_posts()) : $past_evenements->the_post();  // past events  ?>
+            <?php   if($past_evenements):
+              while($past_evenements->have_posts()) : $past_evenements->the_post();  // past events  ?>
                 <?php $image = ( has_post_thumbnail()) ? thumbnail_of_post_url(get_the_ID(),  'rectangle') : ''; ?>
                 <?php $url = get_the_permalink(); ?>
                 <?php $start_date = get_field('start_date'); ?>
@@ -135,7 +137,7 @@ if (  $ev_count  < 3) {
                         <?php echo get_the_title(); ?>
                     </p>
                 </li>
-            <?php  endwhile; ?>
+            <?php  endwhile; endif; ?>
 
 
 
