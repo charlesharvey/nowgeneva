@@ -29,7 +29,11 @@
 
 .single_boutique {
     $boutique_image_height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    p.category {
+      text-align:center;
+    }
     a.boutique_image {
         display: block;
         position: relative;
@@ -94,8 +98,9 @@ a.social_media.pinterest:hover {background: #bd081c;}
 a.social_media.twitter:hover {background: #1ea1f2;}
 
 .logo_boutique {
-  border: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
   margin-bottom: 15px;
+  padding-bottom: 15px;
   filter: grayscale(1);
   transition: all ease-in-out 0.5s;
   &:hover {

@@ -14,9 +14,11 @@
       <div class="advert">
           <img src="<?php echo $image; ?>"  alt="<?php echo get_field('text'); ?>">
           <p class="wp-caption-text <?php echo $captionclass; ?>"><?php echo $caption; ?></p>
-          <div class="advert_text">
-              <h2 style="margin:0;"><?php echo $pub_title; ?></h2>
-          </div>
+          <?php if($pub_title) : ?>
+            <div class="advert_text">
+                <h2 style="margin:0;"><?php echo $pub_title; ?></h2>
+            </div>
+          <?php endif; ?> 
       </div>
     </a>
 </div>

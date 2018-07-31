@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <h4>Contact</h4>
-                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:marketing@nowgeneva.com" target="blank">marketing@nowgeneva.com</a><br/><strong>Rédaction:</strong><br /> <a href="mailto:contact@nowgeneva.com" target="_blank">contact@nowgeneva.com</a></p>
+                                <p><strong>Annonceurs:</strong><br/> <a href="mailto:contact@nowgeneva.com" target="blank">contact@nowgeneva.com</a><br/><strong>Rédaction:</strong><br /> <a href="mailto:redaction@nowgeneva.com" target="_blank">redaction@nowgeneva.com</a></p>
                             </div>
                         </div>
 

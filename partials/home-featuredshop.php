@@ -14,10 +14,11 @@
         <img src="<?php echo $image; ?>"  alt="<?php echo get_the_title(); ?>">
         <p class="wp-caption-text <?php echo $captionclass; ?>"><?php echo $caption; ?></p>
         </a>
-        <div class="advert_text">
-            <h2 style="font-size:2em; margin:0;"><a href="<?php echo ($boutique_link); ?>"><?php echo $boutique_title; ?></a></h2>
-
-        </div>
+        <?php if($boutique_title) : ?>
+          <div class="advert_text">
+              <h2 style="font-size:2em; margin:0;"><a href="<?php echo ($boutique_link); ?>"><?php echo $boutique_title; ?></a></h2>
+          </div>
+        <?php endif; ?>
     </div>
 
 
